@@ -1,0 +1,43 @@
+##[pylyzer] failed /home/alec/Documents/Projects/Star Citizen Hauling/Code/definitions.py 1753735990 2067
+.Location: ClassType
+.Location.location_type: Never
+.Location.planet: Never
+.Location.name: Never
+.Location.__call__: (name: Obj, location_type: Obj, planet: Obj) -> definitions.Location
+
+.microTech: {"microTech"}
+.hurston: {"Hurston"}
+.crusader: {"Crusader"}
+.planetary: {"Planetary"}
+.solar: {"Solar"}
+.interstellar: {"Interstellar"}
+.rookie: {"Rookie"}
+.junior: {"Junior"}
+.member: {"Member"}
+.experienced: {"Experienced"}
+.senior: {"Senior"}
+.extra_Small: {"Extra Small"}
+.small: {"Small"}
+.medium: {"Medium"}
+.large: {"Large"}
+definitions = pyimport "definitions"
+.port_Tressler: .Location
+.everus_Harbor: .Location
+.seraphim_Station: .Location
+.mic_L1: .Location
+.mic_L2: .Location
+.mic_L3: .Location
+.mic_L4: .Location
+.mic_L5: .Location
+.pyro_Gateway: .Location
+.new_Babbage: .Location
+.sakura_Gold: .Location
+.greycat_IV: .Location
+.microTech_D01: .Location
+.microTech_D13: .Location
+.rayari_Deltana: .Location
+.rayari_Anvik: .Location
+.rayari_McGrath: .Location
+.rayari_Cantwell: .Location
+.devlin_Scrap: .Location
+.shubin_SMCa6: .Location
