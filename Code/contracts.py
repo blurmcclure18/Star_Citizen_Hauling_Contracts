@@ -85,24 +85,20 @@ class Contract:
         self.max_Container = max_Container
         self.contract_Pay = contract_Pay
 
-#        def __str__(self):
-#            delivery_str = '\n'.join([
-#            f"     - {amount} {item} -> {location.name} on {location.planet}"
-#            for (amount, item, location) in self.deliveries
-#        ])
-#
-#        return (
-#f"""- #### {self.contract_Rank} Rank - {self.contract_Type} {self.contract_Size} Cargo
-#   - Type: {self.contract_Size}
-#   
-#   - From: 
-#     - {self.from_Location.name}
-#  
-#   - To:
-#{delivery_str}
-#     
-#   - Pay: {self.contract_Pay} aUEC
-#""")
+def print_Contract(con):
+    print(
+        f"""- #### {con.contract_Rank} Rank - {con.contract_Type} {con.contract_Size} Cargo
+        - Type: {con.contract_Size}
+
+        - From: 
+            - {con.from_Location.name}
+
+        - To:
+{chr(10).join([f"            - {amount} {item} -> {location.name} on {location.planet}\n" for (amount, item, location) in con.deliveries])}
+        - Max Container Size: {con.max_Container}
+
+        - Pay: {con.contract_Pay} aUEC
+        """)
 
 # Rookie Contracts
 rook_Contract_1 = Contract(
@@ -118,4 +114,5 @@ rook_Contract_1 = Contract(
     max_Container = "1 SCU", 
     contract_Pay = "61,500")
 
-print(rook_Contract_1.contract_Origin)
+print_Contract(rook_Contract_1)
+
