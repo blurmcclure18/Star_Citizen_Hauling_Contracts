@@ -6,10 +6,7 @@ class Location:
         self.planet = planet
 
 
-# String Location Names
-microTech = "microTech"
-hurston = "Hurston"
-crusader = "Crusader"
+# String Location Types
 planetary = "Planetary"
 solar = "Solar"
 interstellar = "Interstellar"
@@ -27,63 +24,103 @@ small = "Small"
 medium = "Medium"
 large = "Large"
 
+# String Location Names (Planets)
+microTech = "microTech"
+hurston = "Hurston"
+crusader = "Crusader"
+arccorp = "ArcCorp"
+
 # Pickup and Delivery Locations
 
 # Solar Locations
+
+# Major Stations
 port_Tressler = Location("Port Tressler", solar, microTech)
 everus_Harbor = Location("Everus Harbor", solar, hurston)
 seraphim_Station = Location("Seraphim Station", solar, crusader)
-mic_L1 = Location("MIC-L1", solar, microTech)
-mic_L2 = Location("MIC-L2", solar, microTech)
-mic_L3 = Location("MIC-L3", solar, microTech)
-mic_L4 = Location("MIC-L4", solar, microTech)
-mic_L5 = Location("MIC-L5", solar, microTech)
+baijini_Point = Location("Baijini Point", solar, arccorp)
+
+# Lagrange Points
+
+# microTech
+mic_L1 = Location("MIC-L1", solar, "None")
+mic_L2 = Location("MIC-L2", solar, "None")
+mic_L3 = Location("MIC-L3", solar, "None")
+mic_L4 = Location("MIC-L4", solar, "None")
+mic_L5 = Location("MIC-L5", solar, "None")
+
+# Crusader
+cru_L1 = Location("CRU-L1", solar, "None")
+cru_L4 = Location("CRU-L4", solar, "None")
+
+# ArcCorp
+arc_L5 = Location("ARC-L5", solar, "None")
+
+# Hurston
+hur_L2 = Location("HUR-L2", solar, "None")
 
 # Interstellar Locations
 pyro_Gateway = Location("Pyro Gateway", interstellar, "None")
+terra_Gateway = Location("Terra Gateway", interstellar, "None")
+magnus_Gateway = Location("Magnus Gateway", interstellar, "None")
 
 # Planet Locations (microTech)
-new_Babbage = Location('New Babbage', planetary, microTech)
-sakura_Gold = Location('Sakura Sun Goldenrod Workcenter', planetary, microTech)
-greycat_IV = Location('Greycat Stanton IV Production Complex-A', planetary, microTech)
-microTech_D01 = Location('microTech Logistics Depot S4LD01', planetary, microTech)
-microTech_D13 = Location('microTech Logistics Depot S4LD13', planetary, microTech)
-rayari_Deltana = Location('Rayari Deltana Research Outpost', planetary, microTech)
+new_Babbage = Location(
+    'New Babbage', planetary, microTech)
+
+sakura_Gold = Location(
+    'Sakura Sun Goldenrod Workcenter', planetary, microTech)
+
+greycat_IV = Location(
+    'Greycat Stanton IV Production Complex-A', planetary, microTech)
+
+covalex_C05 = Location(
+    "Covalex Distribution Center S4DC05", planetary, microTech)
+
+microTech_D01 = Location(
+    'microTech Logistics Depot S4LD01', planetary, microTech)
+
+microTech_D13 = Location(
+    'microTech Logistics Depot S4LD13', planetary, microTech)
+
+rayari_Deltana = Location(
+    'Rayari Deltana Research Outpost', planetary, microTech)
 
 # Surrounding Planets (microTech)
-rayari_Anvik = Location('Rayari Anvik Research Outpost', planetary, "Calliope")
-rayari_McGrath = Location('Rayari McGrath Research Outpost', planetary, "Clio")
-rayari_Cantwell = Location('Rayari Cantwell Research Outpost', planetary, "Clio")
-devlin_Scrap = Location('Devlin Scrap & Salvage', planetary, "Euterpe")
-shubin_SMCa6 = Location('Shubin Mining Facility SMCa-6', planetary, "Calliope")
+rayari_Anvik = Location(
+    'Rayari Anvik Research Outpost', planetary, "Calliope")
 
+shubin_SMCa6 = Location(
+    'Shubin Mining Facility SMCa-6', planetary, "Calliope")
 
-# Create Contracts
+shubin_SMCa8 = Location(
+    'Shubin Mining Facility SMCa-8', planetary, "Calliope")
 
-#class Contract:
-#    def __init__(self,contract_Origin, contract_Rank, contract_Type, contract_Size, from_Location, to_Location, contract_Supplies, max_Container, contract_Pay):
-#        self.contract_Origin = contract_Origin
-#        self.contract_Rank = contract_Rank
-#        self.contract_Type = contract_Type
-#        self.contract_Size = contract_Size
-#        self.from_Location = from_Location
-#        self.to_Location = to_Location
-#        self.contract_Supplies = contract_Supplies
-#        self.max_Container = max_Container
-#        self.contract_Pay = contract_Pay
+rayari_McGrath = Location(
+    'Rayari McGrath Research Outpost', planetary, "Clio")
+
+rayari_Cantwell = Location(
+    'Rayari Cantwell Research Outpost', planetary, "Clio")
+
+devlin_Scrap = Location(
+    'Devlin Scrap & Salvage', planetary, "Euterpe")
+
 
 # Update the constructor signature
+
+
 class Contract:
-    def __init__(self, contract_Origin, contract_Rank, contract_Type, contract_Size,
-                 from_Location, deliveries, max_Container, contract_Pay):
+    def __init__(self, contract_Origin, contract_Rank, contract_Type, contract_Size, from_Location, deliveries, max_Container, contract_Pay):
         self.contract_Origin = contract_Origin
         self.contract_Rank = contract_Rank
         self.contract_Type = contract_Type
         self.contract_Size = contract_Size
         self.from_Location = from_Location
-        self.deliveries = deliveries  # List of tuples: [(amount, item, location), ...]
+        # List of tuples: [(amount, item, location), ...]
+        self.deliveries = deliveries
         self.max_Container = max_Container
         self.contract_Pay = contract_Pay
+
 
 def print_Contract(con):
     print(
@@ -93,26 +130,45 @@ def print_Contract(con):
         - From: 
             - {con.from_Location.name}
 
-        - To:
-{chr(10).join([f"            - {amount} {item} -> {location.name} on {location.planet}\n" for (amount, item, location) in con.deliveries])}
+        - To:\n {chr(10).join([f"          - {amount} SCU {item} -> {location.name} on {
+            location.planet}\n" for (amount, item, location) in con.deliveries])}
         - Max Container Size: {con.max_Container}
 
-        - Pay: {con.contract_Pay} aUEC
+        - Pay: {'{:,}'.format(con.contract_Pay)} aUEC
         """)
+
 
 # Rookie Contracts
 rook_Contract_1 = Contract(
-    contract_Origin = microTech, 
-    contract_Rank = rookie, 
-    contract_Type = planetary, 
-    contract_Size = extra_Small, 
-    from_Location = port_Tressler, 
-    deliveries = [
-        ("5 SCU", "Carbon", greycat_IV), 
-        ("4 SCU", "Carbon", sakura_Gold)
-    ], 
-    max_Container = "1 SCU", 
-    contract_Pay = "61,500")
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=planetary,
+    contract_Size=extra_Small,
+    from_Location=port_Tressler,
+    deliveries=[
+        (5, "Carbon", greycat_IV),
+        (4, "Carbon", sakura_Gold)
+    ],
+    max_Container="1 SCU",
+    contract_Pay=61500)
+
+rook_Contract_2 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=planetary,
+    contract_Size=small,
+    from_Location=port_Tressler,
+    deliveries=[
+        (18, "Hydrogen", microTech_D13)
+    ],
+    max_Container="4 SCU",
+    contract_Pay=43750)
+
 
 print_Contract(rook_Contract_1)
 
+total_Profit = rook_Contract_1.contract_Pay + rook_Contract_2.contract_Pay
+
+formatted_Total_Profit = '{:,}'.format(total_Profit)
+
+print("Total Profit:", formatted_Total_Profit, "aUEC")
