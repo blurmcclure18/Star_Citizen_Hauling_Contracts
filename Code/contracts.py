@@ -1,4 +1,7 @@
+import textwrap
 # Location Class
+
+
 class Location:
     def __init__(self, name, location_type, planet):
         self.name = name
@@ -123,19 +126,24 @@ class Contract:
 
 
 def print_Contract(con):
-    print(
-        f"""- #### {con.contract_Rank} Rank - {con.contract_Type} {con.contract_Size} Cargo
-        - Type: {con.contract_Size}
+    lines = []
+    lines.append(
+        f"- #### {con.contract_Rank} Rank - {con.contract_Type} {con.contract_Size} Cargo")
+    lines.append(f"  - Type: {con.contract_Size}")
+    lines.append("")
+    lines.append("  - From:")
+    lines.append(f"    - {con.from_Location.name}")
+    lines.append("")
+    lines.append("  - To:")
+    for amount, item, location in con.deliveries:
+        lines.append(
+            f"    - {amount} SCU {item} -> {location.name} on {location.planet}")
+    lines.append("")
+    lines.append(f"  - Max Container Size: {con.max_Container} SCU")
+    lines.append("")
+    lines.append(f"  - Pay: {'{:,}'.format(con.contract_Pay)} aUEC\n")
 
-        - From: 
-            - {con.from_Location.name}
-
-        - To:\n {chr(10).join([f"          - {amount} SCU {item} -> {location.name} on {
-            location.planet}\n" for (amount, item, location) in con.deliveries])}
-        - Max Container Size: {con.max_Container}
-
-        - Pay: {'{:,}'.format(con.contract_Pay)} aUEC
-        """)
+    print("\n".join(lines))
 
 
 # Rookie Contracts
@@ -166,6 +174,7 @@ rook_Contract_2 = Contract(
 
 
 print_Contract(rook_Contract_1)
+print_Contract(rook_Contract_2)
 
 total_Profit = rook_Contract_1.contract_Pay + rook_Contract_2.contract_Pay
 
