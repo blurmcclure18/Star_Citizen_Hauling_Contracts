@@ -1,4 +1,3 @@
-import textwrap
 # Location Class
 
 
@@ -13,6 +12,7 @@ class Location:
 planetary = "Planetary"
 solar = "Solar"
 interstellar = "Interstellar"
+direct = "Direct "
 
 # String Contract Ranks
 rookie = "Rookie"
@@ -157,25 +157,42 @@ rook_Contract_1 = Contract(
         (5, "Carbon", greycat_IV),
         (4, "Carbon", sakura_Gold)
     ],
-    max_Container="1 SCU",
+    max_Container=1,
     contract_Pay=61500)
 
 rook_Contract_2 = Contract(
     contract_Origin=microTech,
     contract_Rank=rookie,
     contract_Type=planetary,
-    contract_Size=small,
+    contract_Size=extra_Small,
     from_Location=port_Tressler,
     deliveries=[
-        (18, "Hydrogen", microTech_D13)
+        (4, "Titanium", greycat_IV),
+        (3, "Titanium", new_Babbage)
     ],
-    max_Container="4 SCU",
-    contract_Pay=43750)
+    max_Container=4,
+    contract_Pay=61500)
 
+rook_Contract_3 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=direct+planetary,
+    contract_Size=small,
+    from_Location=new_Babbage,
+    deliveries=[
+        (15, "Agricultural Supplies", port_Tressler)
+    ],
+    max_Container=4,
+    contract_Pay=34500)
+
+if len(rook_Contract_2.deliveries) < 2:
+    print("1 delivery location")
+elif len(rook_Contract_2.deliveries) >= 2:
+    print("2 or more delivery locations")
 
 print_Contract(rook_Contract_1)
 print_Contract(rook_Contract_2)
-
+print_Contract(rook_Contract_3)
 total_Profit = rook_Contract_1.contract_Pay + rook_Contract_2.contract_Pay
 
 formatted_Total_Profit = '{:,}'.format(total_Profit)
