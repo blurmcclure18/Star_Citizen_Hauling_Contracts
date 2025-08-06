@@ -26,10 +26,36 @@ mic_Contract_2 = Contract(
         (4, "Titanium", greycat_IV),
         (3, "Titanium", new_Babbage)
     ],
-    max_Container=4,
+    max_Container=1,
     contract_Pay=61500)
 
 mic_Contract_3 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=planetary,
+    contract_Size=extra_Small,
+    from_Location=port_Tressler,
+    deliveries=[
+        (5, "Quartz", greycat_IV),
+        (4, "Quartz", sakura_Gold)
+    ],
+    max_Container=1,
+    contract_Pay=61500)
+
+mic_Contract_4 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=planetary,
+    contract_Size=extra_Small,
+    from_Location=port_Tressler,
+    deliveries=[
+        (5, "Aluminum", new_Babbage),
+        (4, "Aluminum", sakura_Gold)
+    ],
+    max_Container=1,
+    contract_Pay=61500)
+
+mic_Contract_5 = Contract(
     contract_Origin=microTech,
     contract_Rank=rookie,
     contract_Type=direct+planetary,
@@ -41,6 +67,17 @@ mic_Contract_3 = Contract(
     max_Container=4,
     contract_Pay=34500)
 
+mic_Contract_6 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=direct+planetary,
+    contract_Size=extra_Small,
+    from_Location=port_Tressler,
+    deliveries=[
+        (11, "Silicon", sakura_Gold)
+    ],
+    max_Container=1,
+    contract_Pay=50250)
 
 # Automatically collect all mic_Contract_* variables into a list
 microTech_contracts = [
