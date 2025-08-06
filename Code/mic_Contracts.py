@@ -1,0 +1,49 @@
+
+from myLocations import *
+from myDefinitions import *
+
+# Rookie Contracts
+mic_Contract_1 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=planetary,
+    contract_Size=extra_Small,
+    from_Location=port_Tressler,
+    deliveries=[
+        (5, "Carbon", greycat_IV),
+        (4, "Carbon", sakura_Gold)
+    ],
+    max_Container=1,
+    contract_Pay=61500)
+
+mic_Contract_2 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=planetary,
+    contract_Size=extra_Small,
+    from_Location=port_Tressler,
+    deliveries=[
+        (4, "Titanium", greycat_IV),
+        (3, "Titanium", new_Babbage)
+    ],
+    max_Container=4,
+    contract_Pay=61500)
+
+mic_Contract_3 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=direct+planetary,
+    contract_Size=small,
+    from_Location=new_Babbage,
+    deliveries=[
+        (15, "Agricultural Supplies", port_Tressler)
+    ],
+    max_Container=4,
+    contract_Pay=34500)
+
+
+# Automatically collect all mic_Contract_* variables into a list
+microTech_contracts = [
+    value for name, value in globals().items()
+    if name.startswith("mic_Contract_")
+]
