@@ -172,6 +172,61 @@ mic_Contract_15 = Contract(
     max_Container=4,
     contract_Pay=37250)
 
+mic_Contract_16 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=direct+planetary,
+    contract_Size=small,
+    from_Location=port_Tressler,
+    deliveries=[(15, "Pressurized Ice", sakura_Gold), (13, "Processed Food", sakura_Gold)
+                ],
+    max_Container=4,
+    contract_Pay=43750)
+
+mic_Contract_17 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=planetary,
+    contract_Size=small,
+    from_Location=port_Tressler,
+    deliveries=[(6, "Tin", greycat_IV), (4, "Tin", sakura_Gold)
+                ],
+    max_Container=4,
+    contract_Pay=48500)
+
+mic_Contract_18 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=planetary,
+    contract_Size=small,
+    from_Location=port_Tressler,
+    deliveries=[(4, "Agricultural Supplies", rayari_Anvik), (5, "Agricultural Supplies", rayari_Deltana)
+                ],
+    max_Container=4,
+    contract_Pay=48500)
+
+mic_Contract_19 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=planetary,
+    contract_Size=small,
+    from_Location=port_Tressler,
+    deliveries=[(6, "Stims", rayari_McGrath), (4, "Stims", rayari_Cantwell)
+                ],
+    max_Container=4,
+    contract_Pay=48500)
+
+mic_Contract_20 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=planetary,
+    contract_Size=small,
+    from_Location=port_Tressler,
+    deliveries=[(11, "Hydrogen", rayari_Cantwell), (15, "Hydrogen", rayari_Anvik)
+                ],
+    max_Container=4,
+    contract_Pay=55000)
+
 # Automatically collect all mic_Contract_* variables into a list
 microTech_contracts = [
     value for name, value in globals().items()
