@@ -149,7 +149,7 @@ lathan = Location(
 hahn = Location(
     'HDMS-Hahn', planetary, "Magda")
 
-perlman - Location(
+perlman = Location(
     'HDMS-Perlman', planetary, "Magda")
 
 ryder = Location(

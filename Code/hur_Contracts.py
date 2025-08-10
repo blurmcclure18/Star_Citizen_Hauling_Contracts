@@ -570,8 +570,8 @@ hur_Contract_48 = Contract(
                 (3, stim, hur_L2),
                 (2, stim, hur_L1),
                 ],
-    max_container=4,
-    contract_pay=72500)
+    max_Container=4,
+    contract_Pay=72500)
 
 hur_Contract_49 = Contract(
     contract_Origin=hurston,
