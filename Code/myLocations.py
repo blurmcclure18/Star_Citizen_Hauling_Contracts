@@ -34,11 +34,14 @@ cru_L1 = Location("CRU-L1", solar, "None")
 cru_L4 = Location("CRU-L4", solar, "None")
 
 # ArcCorp
-arc_L5 = Location("ARC-L5", solar, "None")
 arc_L1 = Location("ARC-L1", solar, "None")
+arc_L5 = Location("ARC-L5", solar, "None")
 
 # Hurston
+hur_L1 = Location("HUR-L1", solar, "None")
 hur_L2 = Location("HUR-L2", solar, "None")
+hur_L3 = Location("HUR-L3", solar, "None")
+hur_L4 = Location("HUR-L4", solar, "None")
 
 # Interstellar Locations
 pyro_Gateway = Location("Pyro Gateway", interstellar, "None")
@@ -100,3 +103,26 @@ smo_18 = Location(
 
 smo_22 = Location(
     'Shubin Mining Facility SMO-22', planetary, microTech)
+
+# Planet Locations (Hurston)
+cassillo = Location(
+    'HDPC-Cassillo', planetary, hurston)
+
+farnesway = Location(
+    'HDPC-Farnesway', planetary, hurston)
+
+pinewood = Location(
+    'HDMS-Pinewood', planetary, hurston)
+
+teasa = Location(
+    'Teasa Spaceport in Lorville', planetary, hurston)
+
+sakura_Sun = Location(
+    'Sakura Sun Magnolia Workcenter', planetary, hurston)
+
+covalex_C06 = Location(
+    'Covalex Distribution Center S1DC06', planetary, hurston)
+
+# Surrounding Planets (Hurston)
+hahn = Location(
+    'HDMS-Hahn', planetary, "Magda")
