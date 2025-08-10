@@ -1,5 +1,6 @@
 from mic_Contracts import microTech_contracts as mc
-from myLocations import port_Tressler
+from hur_Contracts import hurston_contracts as hu
+from myLocations import *
 
 
 def print_Contract(con):
@@ -24,7 +25,7 @@ def print_Contract(con):
 
 
 ship_Max_Cargo = 224
-max_Delivery_Locations = 4
+max_Delivery_Locations = 5
 
 contracts = mc
 chosen_location = port_Tressler

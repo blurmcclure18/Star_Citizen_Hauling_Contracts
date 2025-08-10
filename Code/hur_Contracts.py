@@ -113,7 +113,7 @@ hur_Contract_10 = Contract(
     contract_Type=direct+planetary,
     contract_Size=small,
     from_Location=everus_Harbor,
-    deliveries=[(8, sti, sakura_Sun),
+    deliveries=[(8, stim, sakura_Sun),
                 ],
     max_Container=4,
     contract_Pay=37250)
@@ -355,6 +355,287 @@ hur_Contract_31 = Contract(
                 ],
     max_Container=8,
     contract_Pay=50500)
+
+# Junior Small Contracts
+hur_Contract_32 = Contract(
+    contract_Origin=hurston,
+    contract_Rank=junior,
+    contract_Type=direct+local,
+    contract_Size=small,
+    from_Location=cassillo,
+    deliveries=[(9, stim, edmond),
+                ],
+    max_Container=4,
+    contract_Pay=52500)
+
+hur_Contract_33 = Contract(
+    contract_Origin=hurston,
+    contract_Rank=junior,
+    contract_Type=direct+local,
+    contract_Size=small,
+    from_Location=ryder,
+    deliveries=[(14, iron, cassillo),
+                ],
+    max_Container=4,
+    contract_Pay=52500)
+
+hur_Contract_34 = Contract(
+    contract_Origin=hurston,
+    contract_Rank=junior,
+    contract_Type=local,
+    contract_Size=small,
+    from_Location=teasa,
+    deliveries=[(5, hydro_Fuel, ryder),
+                (2, hydro_Fuel, pinewood),
+                (7, quantum, pinewood),
+                (8, ammo, ryder),
+                ],
+    max_Container=4,
+    contract_Pay=72000)
+
+hur_Contract_35 = Contract(
+    contract_Origin=hurston,
+    contract_Rank=junior,
+    contract_Type=local,
+    contract_Size=small,
+    from_Location=[anderson, thedus],
+    deliveries=[(6, iron, teasa),
+                (4, iron, teasa)
+                ],
+    max_Container=4,
+    contract_Pay=70750)
+
+hur_Contract_36 = Contract(
+    contract_Origin=hurston,
+    contract_Rank=junior,
+    contract_Type=direct+local,
+    contract_Size=small,
+    from_Location=cassillo,
+    deliveries=[(15, press, ryder),
+                (11, food, ryder)
+                ],
+    max_Container=4,
+    contract_Pay=60750)
+
+hur_Contract_37 = Contract(
+    contract_Origin=hurston,
+    contract_Rank=junior,
+    contract_Type=direct+local,
+    contract_Size=extra_Small,
+    from_Location=hadley,
+    deliveries=[(8, waste, cassillo),
+                ],
+    max_Container=1,
+    contract_Pay=69250)
+
+hur_Contract_38 = Contract(
+    contract_Origin=hurston,
+    contract_Rank=junior,
+    contract_Type=direct+local,
+    contract_Size=small,
+    from_Location=teasa,
+    deliveries=[(10, scrap, reclam),
+                ],
+    max_Container=4,
+    contract_Pay=52500)
+
+hur_Contract_39 = Contract(
+    contract_Origin=hurston,
+    contract_Rank=junior,
+    contract_Type=direct+local,
+    contract_Size=small,
+    from_Location=cassillo,
+    deliveries=[(5, quantum, ryder),
+                (7, hydro_Fuel, ryder),
+                (8, ammo, ryder),
+                ],
+    max_Container=4,
+    contract_Pay=60750)
+
+hur_Contract_40 = Contract(
+    contract_Origin=hurston,
+    contract_Rank=junior,
+    contract_Type=planetary,
+    contract_Size=small,
+    from_Location=[bezdek, lathan, bezdek, lathan],
+    deliveries=[(3, iron, everus_Harbor),
+                (2, iron, everus_Harbor),
+                (3, raw, everus_Harbor),
+                (2, raw, everus_Harbor),
+                ],
+    max_Container=4,
+    contract_Pay=59750)
+
+hur_Contract_41 = Contract(
+    contract_Origin=hurston,
+    contract_Rank=junior,
+    contract_Type=planetary,
+    contract_Size=small,
+    from_Location=everus_Harbor,
+    deliveries=[(6, press, lathan),
+                (6, press, bezdek),
+                (6, food, lathan),
+                (7, food, bezdek),
+                ],
+    max_Container=4,
+    contract_Pay=65250)
+
+hur_Contract_42 = Contract(
+    contract_Origin=hurston,
+    contract_Rank=junior,
+    contract_Type=planetary,
+    contract_Size=small,
+    from_Location=everus_Harbor,
+    deliveries=[(5, hydro_Fuel, ryder),
+                (2, hydro_Fuel, lathan),
+                (8, quantum, lathan),
+                (8, ammo, ryder),
+                ],
+    max_Container=4,
+    contract_Pay=65250)
+
+hur_Contract_43 = Contract(
+    contract_Origin=hurston,
+    contract_Rank=junior,
+    contract_Type=planetary,
+    contract_Size=small,
+    from_Location=everus_Harbor,
+    deliveries=[(5, press, covalex_C06),
+                (5, press, sakura_Sun),
+                (5, food, covalex_C06),
+                (4, food, sakura_Sun),
+                ],
+    max_Container=4,
+    contract_Pay=65250)
+
+hur_Contract_44 = Contract(
+    contract_Origin=hurston,
+    contract_Rank=junior,
+    contract_Type=planetary,
+    contract_Size=extra_Small,
+    from_Location=[bezdek, pinewood],
+    deliveries=[(3, waste, everus_Harbor),
+                (3, waste, everus_Harbor)
+                ],
+    max_Container=1,
+    contract_Pay=76750)
+
+hur_Contract_45 = Contract(
+    contract_Origin=hurston,
+    contract_Rank=junior,
+    contract_Type=planetary,
+    contract_Size=small,
+    from_Location=[hahn, perlman],
+    deliveries=[(7, iron, everus_Harbor),
+                (4, iron, everus_Harbor)
+                ],
+    max_Container=4,
+    contract_Pay=59750)
+
+hur_Contract_46 = Contract(
+    contract_Origin=hurston,
+    contract_Rank=junior,
+    contract_Type=solar,
+    contract_Size=small,
+    from_Location=everus_Harbor,
+    deliveries=[(7, press, hur_L4),
+                (5, press, hur_L1),
+                (4, food, hur_L4),
+                (3, food, hur_L1),
+                ],
+    max_Container=4,
+    contract_Pay=51000)
+
+hur_Contract_47 = Contract(
+    contract_Origin=hurston,
+    contract_Rank=junior,
+    contract_Type=solar,
+    contract_Size=small,
+    from_Location=everus_Harbor,
+    deliveries=[(3, stim, hur_L5),
+                (3, stim, hur_L2),
+                (4, stim, hur_L1),
+                ],
+    max_Container=4,
+    contract_Pay=60750)
+
+hur_Contract_48 = Contract(
+    contract_Origin=hurston,
+    contract_Rank=junior,
+    contract_Type=solar,
+    contract_Size=small,
+    from_Location=everus_Harbor,
+    deliveries=[(3, stim, hur_L5),
+                (3, stim, hur_L4),
+                (3, stim, hur_L2),
+                (2, stim, hur_L1),
+                ],
+    max_container=4,
+    contract_pay=72500)
+
+hur_Contract_49 = Contract(
+    contract_Origin=hurston,
+    contract_Rank=junior,
+    contract_Type=solar,
+    contract_Size=small,
+    from_Location=[hur_L2, hur_L3, hur_L5, hur_L1],
+    deliveries=[(3, waste, everus_Harbor),
+                (2, waste, everus_Harbor),
+                (3, waste, everus_Harbor),
+                (2, waste, everus_Harbor),
+                ],
+    max_Container=4,
+    contract_Pay=72500)
+
+hur_Contract_50 = Contract(
+    contract_Origin=hurston,
+    contract_Rank=junior,
+    contract_Type=solar,
+    contract_Size=small,
+    from_Location=[hur_L5, hur_L4, hur_L2],
+    deliveries=[(4, waste, everus_Harbor),
+                (2, waste, everus_Harbor),
+                (4, waste, everus_Harbor),
+                ],
+    max_Container=4,
+    contract_Pay=60750)
+
+hur_Contract_51 = Contract(
+    contract_Origin=hurston,
+    contract_Rank=junior,
+    contract_Type=solar,
+    contract_Size=small,
+    from_Location=[seraphim_Station, port_Tressler],
+    deliveries=[(6, agri_Supplies, everus_Harbor),
+                (4, agri_Supplies, everus_Harbor)
+                ],
+    max_Container=4,
+    contract_Pay=57000)
+
+hur_Contract_52 = Contract(
+    contract_Origin=hurston,
+    contract_Rank=junior,
+    contract_Type=direct+solar,
+    contract_Size=extra_Small,
+    from_Location=seraphim_Station,
+    deliveries=[(10, carbon, everus_Harbor),
+                ],
+    max_Container=1,
+    contract_Pay=56250)
+
+hur_Contract_53 = Contract(
+    contract_Origin=hurston,
+    contract_Rank=junior,
+    contract_Type=direct+solar,
+    contract_Size=small,
+    from_Location=port_Tressler,
+    deliveries=[(22, press, seraphim_Station),
+                ],
+    max_Container=4,
+    contract_Pay=52250)
+
+# Junior Medium Contracts
+
 
 # Automatically collect all hur_Contract_* variables into a list
 hurston_contracts = [

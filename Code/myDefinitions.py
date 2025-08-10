@@ -41,6 +41,8 @@ scrap = "Scrap"
 quantum = "Quantum Fuel"
 ammo = "Ship Ammunition"
 hydro_Fuel = "Hydrogen Fuel"
+iron = "Iron (Ore)"
+raw = "Quartz (Raw)"
 
 
 class Contract:
