@@ -70,6 +70,9 @@ rayari_Deltana = Location(
 rayari_Anvik = Location(
     'Rayari Anvik Research Outpost', planetary, "Calliope")
 
+rayari_Kaltag = Location(
+    'Rayari Kaltag Research Outpost', planetary, "Calliope")
+
 shubin_SMCa6 = Location(
     'Shubin Mining Facility SMCa-6', planetary, "Calliope")
 
@@ -84,3 +87,15 @@ rayari_Cantwell = Location(
 
 devlin_Scrap = Location(
     'Devlin Scrap & Salvage', planetary, "Euterpe")
+
+smo_10 = Location(
+    'Shubin Mining Facility SMO-10', planetary, microTech)
+
+smo_13 = Location(
+    'Shubin Mining Facility SMO-13', planetary, microTech)
+
+smo_18 = Location(
+    'Shubin Mining Facility SMO-18', planetary, microTech)
+
+smo_22 = Location(
+    'Shubin Mining Facility SMO-22', planetary, microTech)
