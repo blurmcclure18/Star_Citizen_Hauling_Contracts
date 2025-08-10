@@ -2,7 +2,7 @@
 from myLocations import *
 from myDefinitions import *
 
-# Rookie Contracts
+# Rookie Small Contracts
 mic_Contract_1 = Contract(
     contract_Origin=microTech,
     contract_Rank=rookie,
@@ -226,6 +226,218 @@ mic_Contract_20 = Contract(
                 ],
     max_Container=4,
     contract_Pay=55000)
+
+mic_Contract_21 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=planetary,
+    contract_Size=small,
+    from_Location=port_Tressler,
+    deliveries=[(7, "Stims", greycat_IV), (5, "Stims", sakura_Gold)
+                ],
+    max_Container=4,
+    contract_Pay=48500)
+
+mic_Contract_22 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=direct+planetary,
+    contract_Size=small,
+    from_Location=port_Tressler,
+    deliveries=[(11, "Stims", devlin_Scrap),
+                ],
+    max_Container=4,
+    contract_Pay=37250)
+
+mic_Contract_23 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=direct+planetary,
+    contract_Size=small,
+    from_Location=port_Tressler,
+    deliveries=[(12, "Stims", microTech_D13),
+                ],
+    max_Container=4,
+    contract_Pay=37250)
+
+mic_Contract_24 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=planetary,
+    contract_Size=extra_Small,
+    from_Location=port_Tressler,
+    deliveries=[(5, "Silicon", new_Babbage), (5, "Silicon", mic_L3)
+                ],
+    max_Container=1,
+    contract_Pay=61500)
+
+mic_Contract_25 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=direct+planetary,
+    contract_Size=small,
+    from_Location=port_Tressler,
+    deliveries=[(8, "Pressurized Ice", devlin_Scrap), (14, "Processed Food", devlin_Scrap)
+                ],
+    max_Container=4,
+    contract_Pay=43750)
+
+mic_Contract_26 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=direct+planetary,
+    contract_Size=small,
+    from_Location=microTech_D01,
+    deliveries=[(5, "Waste", port_Tressler), (7, "Scrap", port_Tressler)
+                ],
+    max_Container=4,
+    contract_Pay=45000)
+
+mic_Contract_27 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=direct+solar,
+    contract_Size=extra_Small,
+    from_Location=mic_L2,
+    deliveries=[(11, "Silicon", mic_L3),
+                ],
+    max_Container=1,
+    contract_Pay=63500)
+
+mic_Contract_28 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=direct+solar,
+    contract_Size=extra_Small,
+    from_Location=mic_L2,
+    deliveries=[(10, "Carbon", port_Tressler),
+                ],
+    max_Container=1,
+    contract_Pay=45750)
+
+mic_Contract_29 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=direct+solar,
+    contract_Size=small,
+    from_Location=mic_L3,
+    deliveries=[(4, "Waste", port_Tressler), (5, "Scrap", port_Tressler)
+                ],
+    max_Container=4,
+    contract_Pay=44500)
+
+mic_Contract_30 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=direct+solar,
+    contract_Size=small,
+    from_Location=port_Tressler,
+    deliveries=[(9, "Stims", mic_L3),
+                ],
+    max_Container=4,
+    contract_Pay=44500)
+
+mic_Contract_31 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=solar,
+    contract_Size=small,
+    from_Location=mic_L4, mic_L1,
+    deliveries=[(3, "Waste", port_Tressler), (3, "Waste", port_Tressler), (3, "Scrap", port_Tressler), (2, "Scrap", port_Tressler),
+                ],
+    max_Container=4,
+    contract_Pay=50250)
+
+mic_Contract_32 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=solar,
+    contract_Size=small,
+    from_Location=port_Tressler,
+    deliveries=[(6, "Stims", mic_L4), (5, "Stims", mic_L2),
+                ],
+    max_Container=4,
+    contract_Pay=50250)
+
+mic_Contract_33 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=solar,
+    contract_Size=extra_Small,
+    from_Location=seraphim_Station,
+    deliveries=[(4, "Carbon", port_Tressler), (4, "Carbon", everus_Harbor)
+                ],
+    max_Container=1,
+    contract_Pay=63250)
+
+mic_Contract_34 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=direct+solar,
+    contract_Size=small,
+    from_Location=seraphim_Station,
+    deliveries=[(9, "Agricultural Supplies", everus_Harbor),
+                ],
+    max_Container=4,
+    contract_Pay=41750)
+
+mic_Contract_35 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=direct+interstellar,
+    contract_Size=small,
+    from_Location=everus_Harbor,
+    deliveries=[(9, "Agricultural Supplies", pyro_Gateway),
+                ],
+    max_Container=4,
+    contract_Pay=40000)
+
+# Rookie Medium Contracts
+mic_Contract_36 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=direct+planetary,
+    contract_Size=medium,
+    from_Location=new_Babbage,
+    deliveries=[(46, "Waste", port_Tressler), (55, "Scrap", port_Tressler)
+                ],
+    max_Container=8,
+    contract_Pay=53000)
+
+mic_Contract_37 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=direct+planetary,
+    contract_Size=medium,
+    from_Location=new_Babbage,
+    deliveries=[(108, "Stims", port_Tressler),
+                ],
+    max_Container=8,
+    contract_Pay=76500)
+
+mic_Contract_38 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=solar,
+    contract_Size=medium,
+    from_Location=port_Tressler,
+    deliveries=[(103, "Quartz (Raw)", mic_L2),
+                ],
+    max_Container=8,
+    contract_Pay=51250)
+
+mic_Contract_39 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=rookie,
+    contract_Type=direct+solar,
+    contract_Size=medium,
+    from_Location=mic_L2,
+    deliveries=[(84, "Silicon", port_Tressler),
+                ],
+    max_Container=8,
+    contract_Pay=51250)
+
+# Junior Small Contracts
 
 # Automatically collect all mic_Contract_* variables into a list
 microTech_contracts = [
