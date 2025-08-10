@@ -1,6 +1,5 @@
-
-from myLocations import *
 from myDefinitions import *
+from myLocations import *
 
 # Rookie Small Contracts
 mic_Contract_1 = Contract(
@@ -1232,6 +1231,346 @@ mic_Contract_105 = Contract(
     ],
     max_Container=4,
     contract_Pay=135250)
+
+
+# Experienced Medium Contracts
+mic_Contract_106 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=direct+interstellar,
+    contract_Size=medium,
+    from_Location=pyro_Gateway,
+    deliveries=[(269, press, everus_Harbor),
+    ],
+    max_Container=16,
+    contract_Pay=163500)
+
+mic_Contract_107 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=direct+planetary,
+    contract_Size=medium,
+    from_Location=port_Tressler,
+    deliveries=[(27, press, covalex_C05),
+                (303, food, covalex_C05)
+    ],
+    max_Container=16,
+    contract_Pay=163250)
+
+mic_Contract_108 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=direct+planetary,
+    contract_Size=medium,
+    from_Location=port_Tressler,
+    deliveries=[(127, quantum, microTech_D01),
+                (81, hydro_Fuel, microTech_D01),
+                (101, ammo, microTech_D01)
+    ],
+    max_Container=16,
+    contract_Pay=163250)
+
+mic_Contract_109 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=planetary,
+    contract_Size=medium,
+    from_Location=port_Tressler,
+    deliveries=[(69, hydro_Fuel, greycat_IV),
+                (50, hydrogen, microTech_D13),
+                (96, quantum, microTech_D13),
+                (95, ammo, greycat_IV)
+    ],
+    max_Container=16,
+    contract_Pay=207000)
+
+mic_Contract_110 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=direct+planetary,
+    contract_Size=medium,
+    from_Location=new_Babbage,
+    deliveries=[(83, quantum, port_Tressler),
+                (127, hydro_Fuel, port_Tressler),
+                (91, ammo, port_Tressler)
+    ],
+    max_Container=16,
+    contract_Pay=160500)
+
+mic_Contract_111 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=direct+planetary,
+    contract_Size=medium,
+    from_Location=port_Tressler,
+    deliveries=[(423, food, new_Babbage),
+    ],
+    max_Container=16,
+    contract_Pay=163250)
+
+mic_Contract_112 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=planetary,
+    contract_Size=medium,
+    from_Location=[greycat_IV, covalex_C05,greycat_IV, covalex_C05],
+    deliveries=[(27, waste, port_Tressler),
+                (25, waste, port_Tressler),
+                (26, scrap, port_Tressler), 
+                (21, scrap, port_Tressler)
+    ],
+    max_Container=16,
+    contract_Pay=84000)
+
+mic_Contract_113 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=direct+planetary,
+    contract_Size=medium,
+    from_Location=port_Tressler,
+    deliveries=[(314, hydrogen, new_Babbage),
+    ],
+    max_Container=16,
+    contract_Pay=163250)
+
+mic_Contract_114 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=direct+planetary,
+    contract_Size=medium,
+    from_Location=new_Babbage,
+    deliveries=[(268, press, port_Tressler),
+    ],
+    max_Container=16,
+    contract_Pay=160500)
+
+mic_Contract_115 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=direct+solar,
+    contract_Size=medium,
+    from_Location=port_Tressler,
+    deliveries=[(291, press, everus_Harbor),
+    ],
+    max_Container=16,
+    contract_Pay=165250)
+
+mic_Contract_116 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=direct+solar,
+    contract_Size=medium,
+    from_Location=baijini_Point,
+    deliveries=[(265, press, everus_Harbor),
+    ],
+    max_Container=16,
+    contract_Pay=162250)
+
+mic_Contract_117 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=direct+solar,
+    contract_Size=medium,
+    from_Location=port_Tressler,
+    deliveries=[(131, quantum, mic_L2),
+                (90, hydro_Fuel, mic_L2),
+                (113, ammo, mic_L2)
+    ],
+    max_Container=16,
+    contract_Pay=166500)
+
+mic_Contract_118 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=solar,
+    contract_Size=medium,
+    from_Location=port_Tressler,
+    deliveries=[(49, hydro_Fuel, mic_L1),
+                (54, hydro_Fuel, mic_L2),
+                (92, quantum, mic_L2),
+                (142, ammo, mic_L1)
+    ],
+    max_Container=16,
+    contract_Pay=202250)
+
+# Experienced Large Contracts
+mic_Contract_119 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=direct+interstellar,
+    contract_Size=large,
+    from_Location=terra_Gateway,
+    deliveries=[(1597, food, everus_Harbor),
+    ],
+    max_Container=32,
+    contract_Pay=247250)
+
+mic_Contract_120 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=direct+interstellar,
+    contract_Size=large,
+    from_Location=terra_Gateway,
+    deliveries=[(558, carbon, magnus_Gateway),
+    ],
+    max_Container=32,
+    contract_Pay=138250)
+
+mic_Contract_121 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=direct+interstellar,
+    contract_Size=large,
+    from_Location=everus_Harbor,
+    deliveries=[(518, waste, pyro_Gateway),
+    ],
+    max_Container=32,
+    contract_Pay=128000)
+
+mic_Contract_122 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=direct+interstellar,
+    contract_Size=large,
+    from_Location=everus_Harbor,
+    deliveries=[(1975, food, pyro_Gateway),
+    ],
+    max_Container=32,
+    contract_Pay=267000)
+
+mic_Contract_123 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=direct+interstellar,
+    contract_Size=large,
+    from_Location=pyro_Gateway,
+    deliveries=[(1408, press, magnus_Gateway),
+    ],
+    max_Container=32,
+    contract_Pay=267250)
+
+mic_Contract_124 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=direct+interstellar,
+    contract_Size=large,
+    from_Location=terra_Gateway,
+    deliveries=[(2372, hydrogen, everus_Harbor),
+    ],
+    max_Container=32,
+    contract_Pay=247250)
+
+mic_Contract_125 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=direct+interstellar,
+    contract_Size=large,
+    from_Location=everus_Harbor,
+    deliveries=[(3403, hydrogen, magnus_Gateway),
+    ],
+    max_Container=32,
+    contract_Pay=698750)
+
+mic_Contract_126 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=direct+interstellar,
+    contract_Size=large,
+    from_Location=magnus_Gateway,
+    deliveries=[(622, waste, pyro_Gateway),
+    ],
+    max_Container=32,
+    contract_Pay=141500)
+
+mic_Contract_127 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=direct+interstellar,
+    contract_Size=large,
+    from_Location=magnus_Gateway,
+    deliveries=[(639, silicon, pyro_Gateway),
+    ],
+    max_Container=32,
+    contract_Pay=154250)
+
+mic_Contract_128 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=direct+interstellar,
+    contract_Size=large,
+    from_Location=terra_Gateway,
+    deliveries=[(3380, food, magnus_Gateway),
+    ],
+    max_Container=32,
+    contract_Pay=698750)
+
+mic_Contract_129 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=solar,
+    contract_Size=large,
+    from_Location=everus_Harbor,
+    deliveries=[(947, hydrogen, port_Tressler),
+                (1244, hydrogen, baijini_Point)
+    ],
+    max_Container=32,
+    contract_Pay=263750)
+
+mic_Contract_130 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=direct+solar,
+    contract_Size=large,
+    from_Location=everus_Harbor,
+    deliveries=[(1902, food, seraphim_Station),
+    ],
+    max_Container=32,
+    contract_Pay=245500)
+
+mic_Contract_131 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=direct+solar,
+    contract_Size=large,
+    from_Location=baijini_Point,
+    deliveries=[(1878, food, everus_Harbor),
+    ],
+    max_Container=32,
+    contract_Pay=248250)
+
+mic_Contract_132 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=direct+solar,
+    contract_Size=large,
+    from_Location=baijini_Point,
+    deliveries=[(528, waste, everus_Harbor),
+    ],
+    max_Container=32,
+    contract_Pay=127250)
+
+mic_Contract_133 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=direct+solar,
+    contract_Size=large,
+    from_Location=seraphim_Station,
+    deliveries=[(2713, hydrogen, baijini_Point),
+    ],
+    max_Container=32,
+    contract_Pay=247750)
+
+mic_Contract_134 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=experienced,
+    contract_Type=solar,
+    contract_Size=large,
+    from_Location=[seraphim_Station, baijini_Point],
+    deliveries=[(274, waste, everus_Harbor),
+                (238, waste, everus_Harbor)
+    ],
+    max_Container=32,
+    contract_Pay=136500)
 
 # Automatically collect all mic_Contract_* variables into a list
 microTech_contracts = [
