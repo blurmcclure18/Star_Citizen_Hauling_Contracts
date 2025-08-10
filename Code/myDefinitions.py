@@ -1,4 +1,5 @@
 # String Location Types
+local = "Local"
 planetary = "Planetary"
 solar = "Solar"
 interstellar = "Interstellar"
@@ -22,6 +23,24 @@ microTech = "microTech"
 hurston = "Hurston"
 crusader = "Crusader"
 arccorp = "ArcCorp"
+
+# String Supplies Names
+agri_Supplies = "Agricultural Supplies"
+carbon = "Carbon"
+tin = "Tin"
+alum = "Aluminum"
+titan = "Titanium"
+silicon = "Silicon"
+quartz = "Quartz"
+hydrogen = "Hydrogen"
+press = "Pressurized Ice"
+food = "Processed Food"
+stim = "Stims"
+waste = "Waste"
+scrap = "Scrap"
+quantum = "Quantum Fuel"
+ammo = "Ship Ammunition"
+hydro_Fuel = "Hydrogen Fuel"
 
 
 class Contract:
