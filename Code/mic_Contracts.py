@@ -1572,6 +1572,222 @@ mic_Contract_134 = Contract(
     max_Container=32,
     contract_Pay=136500)
 
+# Senior Medium Contracts
+mic_Contract_135 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=senior,
+    contract_Type=planetary,
+    contract_Size=medium,
+    from_Location=port_Tressler,
+    deliveries=[(68, quantum, greycat_IV),
+                (90, hydro_Fuel, covalex_C05),
+                (52,hydro_Fuel, greycat_IV),
+                (116, ammo, sakura_Gold)
+    ],
+    max_Container=16,
+    contract_Pay=332250)
+
+mic_Contract_137 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=senior,
+    contract_Type=solar,
+    contract_Size=medium,
+    from_Location=mic_L1,
+    deliveries=[(109, quartz, seraphim_Station),
+                (135, quartz, baijini_Point),
+                (83, quartz, port_Tressler)
+    ],
+    max_Container=16,
+    contract_Pay=278000)
+
+mic_Contract_138 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=senior,
+    contract_Type=solar,
+    contract_Size=medium,
+    from_Location=hur_L2,
+    deliveries=[(75, quartz, baijini_Point),
+                (72, quartz, everus_Harbor),
+                (78, quartz, seraphim_Station),
+                (93, quartz, port_Tressler)
+    ],
+    max_Container=16,
+    contract_Pay=319500)
+
+mic_Contract_139 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=senior,
+    contract_Type=solar,
+    contract_Size=medium,
+    from_Location=hur_L2,
+    deliveries=[(119, quartz, port_Tressler),
+                (123, quartz, everus_Harbor),
+                (118, quartz, seraphim_Station),
+    ],
+    max_Container=16,
+    contract_Pay=280250)
+
+mic_Contract_140 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=senior,
+    contract_Type=solar,
+    contract_Size=medium,
+    from_Location=arc_L1,
+    deliveries=[(114, alum, seraphim_Station),
+                (90, alum, everus_Harbor),
+                (91, alum, baijini_Point)
+    ],
+    max_Container=16,
+    contract_Pay=277000)
+
+mic_Contract_142 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=senior,
+    contract_Type=solar,
+    contract_Size=medium,
+    from_Location=arc_L1,
+    deliveries=[(79, alum, seraphim_Station),
+                (66, alum, everus_Harbor),
+                (62, alum, port_Tressler),
+                (75, alum, baijini_Point),
+    ],
+    max_Container=16,
+    contract_Pay=319000)
+
+mic_Contract_143 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=senior,
+    contract_Type=solar,
+    contract_Size=medium,
+    from_Location=everus_Harbor,
+    deliveries=[(120, tin, baijini_Point),
+                (91, tin, port_Tressler),
+                (109, tin, seraphim_Station),
+    ],
+    max_Container=16,
+    contract_Pay=289000)
+
+mic_Contract_144 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=senior,
+    contract_Type=solar,
+    contract_Size=medium,
+    from_Location=mic_L2,
+    deliveries=[(98, quartz, everus_Harbor),
+                (78, quartz, seraphim_Station),
+                (103, quartz, port_Tressler),
+                (84, quartz, baijini_Point),
+    ],
+    max_Container=16,
+    contract_Pay=314000)
+
+mic_Contract_145 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=senior,
+    contract_Type=solar,
+    contract_Size=medium,
+    from_Location=cru_L1,
+    deliveries=[(84, alum, port_Tressler),
+                (102, alum, baijini_Point),
+                (87, alum, seraphim_Station),
+                (89, alum, everus_Harbor),
+    ],
+    max_Container=16,
+    contract_Pay=318250)
+
+mic_Contract_146 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=senior,
+    contract_Type=solar,
+    contract_Size=medium,
+    from_Location=cru_L1,
+    deliveries=[(116, alum, everus_Harbor),
+                (107, alum, baijini_Point),
+                (136, alum, port_Tressler),
+    ],
+    max_Container=16,
+    contract_Pay=279250)
+
+mic_Contract_147 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=senior,
+    contract_Type=solar,
+    contract_Size=medium,
+    from_Location=cru_L1,
+    deliveries=[(76, titan, baijini_Point),
+                (102, titan, everus_Harbor),
+                (84, titan, seraphim_Station),
+                (101, titan, port_Tressler),
+    ],
+    max_Container=16,
+    contract_Pay=313250)
+
+mic_Contract_148 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=senior,
+    contract_Type=solar,
+    contract_Size=medium,
+    from_Location=cru_L1,
+    deliveries=[(139, titan, port_Tressler),
+                (128, titan, everus_Harbor),
+                (121, titan, seraphim_Station),
+    ],
+    max_Container=16,
+    contract_Pay=276250)
+
+mic_Contract_149 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=senior,
+    contract_Type=solar,
+    contract_Size=medium,
+    from_Location=cru_L1,
+    deliveries=[(67, alum, everus_Harbor),
+                (102, alum, port_Tressler),
+                (102, titan, seraphim_Station),
+                (106, titan, everus_Harbor),
+    ],
+    max_Container=16,
+    contract_Pay=337750)
+
+mic_Contract_150 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=senior,
+    contract_Type=solar,
+    contract_Size=medium,
+    from_Location=port_Tressler,
+    deliveries=[(63, quantum, mic_L4),
+                (85, hydro_Fuel, mic_L1),
+                (41, hydro_Fuel, mic_L4),
+                (127, ammo, mic_L2),
+    ],
+    max_Container=16,
+    contract_Pay=320500)
+
+# Senior Large Contracts
+mic_Contract_151 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=senior,
+    contract_Type=direct+interstellar,
+    contract_Size=large,
+    from_Location=terra_Gateway,
+    deliveries=[(4262, hydrogen, magnus_Gateway),
+    ],
+    max_Container=32,
+    contract_Pay=711750)
+
+mic_Contract_152 = Contract(
+    contract_Origin=microTech,
+    contract_Rank=senior,
+    contract_Type=solar,
+    contract_Size=large,
+    from_Location=[baijini_Point, seraphim_Station, port_Tressler],
+    deliveries=[(212, waste, everus_Harbor),
+                (211, waste, everus_Harbor),
+                (180, waste, everus_Harbor),
+    ],
+    max_Container=32,
+    contract_Pay=209500)
+
 # Automatically collect all mic_Contract_* variables into a list
 microTech_contracts = [
     value for name, value in globals().items()

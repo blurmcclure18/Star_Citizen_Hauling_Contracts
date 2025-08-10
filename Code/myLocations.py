@@ -35,6 +35,7 @@ cru_L4 = Location("CRU-L4", solar, "None")
 
 # ArcCorp
 arc_L5 = Location("ARC-L5", solar, "None")
+arc_L1 = Location("ARC-L1", solar, "None")
 
 # Hurston
 hur_L2 = Location("HUR-L2", solar, "None")
