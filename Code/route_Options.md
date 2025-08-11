@@ -4,15 +4,14 @@
 
   - **Total Profit:** 706,500 aUEC  
   - **Number of Contracts:** 9  
-  - **Total stops (unique locations):** 6
+  - **Total stops (unique locations):** 5
 
 ### Locations:
-  - MIC-L5 on None
-  - MIC-L3 on None
-  - MIC-L4 on None
   - MIC-L1 on None
-  - Port Tressler on microTech
   - MIC-L2 on None
+  - MIC-L3 on None
+  - MIC-L5 on None
+  - MIC-L4 on None
 
 ### Route Plan:
   - Start: Port Tressler
