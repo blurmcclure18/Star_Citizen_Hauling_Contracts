@@ -287,7 +287,7 @@ mic_Contract_26 = Contract(
     contract_Type=direct+planetary,
     contract_Size=small,
     from_Location=microTech_D01,
-    deliveries=[(5, "Waste", port_Tressler), (7, "Scrap", port_Tressler)
+    deliveries=[(5, waste, port_Tressler), (7, scrap, port_Tressler)
                 ],
     max_Container=4,
     contract_Pay=45000)
@@ -320,7 +320,7 @@ mic_Contract_29 = Contract(
     contract_Type=direct+solar,
     contract_Size=small,
     from_Location=mic_L3,
-    deliveries=[(4, "Waste", port_Tressler), (5, "Scrap", port_Tressler)
+    deliveries=[(4, waste, port_Tressler), (5, scrap, port_Tressler)
                 ],
     max_Container=4,
     contract_Pay=44500)
@@ -342,10 +342,10 @@ mic_Contract_31 = Contract(
     contract_Type=solar,
     contract_Size=small,
     from_Location=[mic_L4, mic_L1],
-    deliveries=[(3, "Waste", port_Tressler),
-                (3, "Waste", port_Tressler),
-                (3, "Scrap", port_Tressler),
-                (2, "Scrap", port_Tressler)
+    deliveries=[(3, waste, port_Tressler),
+                (3, waste, port_Tressler),
+                (3, scrap, port_Tressler),
+                (2, scrap, port_Tressler)
                 ],
     max_Container=4,
     contract_Pay=50250)
@@ -401,7 +401,7 @@ mic_Contract_36 = Contract(
     contract_Type=direct+planetary,
     contract_Size=medium,
     from_Location=new_Babbage,
-    deliveries=[(46, "Waste", port_Tressler), (55, "Scrap", port_Tressler)
+    deliveries=[(46, waste, port_Tressler), (55, scrap, port_Tressler)
                 ],
     max_Container=8,
     contract_Pay=53000)
@@ -423,7 +423,7 @@ mic_Contract_38 = Contract(
     contract_Type=solar,
     contract_Size=medium,
     from_Location=port_Tressler,
-    deliveries=[(103, "Quartz (Raw)", mic_L2),
+    deliveries=[(103, raw, mic_L2),
                 ],
     max_Container=8,
     contract_Pay=51250)
@@ -468,7 +468,7 @@ mic_Contract_42 = Contract(
     contract_Type=direct+local,
     contract_Size=small,
     from_Location=shubin_SMCa6,
-    deliveries=[(6, "Waste", microTech_D13), (4, "Scrap", microTech_D13)
+    deliveries=[(6, waste, microTech_D13), (4, scrap, microTech_D13)
                 ],
     max_Container=4,
     contract_Pay=52500)
