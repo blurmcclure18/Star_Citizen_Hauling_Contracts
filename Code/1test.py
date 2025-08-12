@@ -29,7 +29,7 @@ def print_Contract(con):
 ship_Max_Cargo = 224
 max_Delivery_Locations = 5
 # Combine microTech and Hurston contracts for global selection
-contracts = mc + hu
+contracts = mc  # + hu
 
 
 def can_add_contract_with_dynamic_cargo(selected_contracts, candidate_contract, ship_Max_Cargo, max_Delivery_Locations, start_loc=None):
@@ -127,9 +127,9 @@ def select_contracts(filtered_contracts, ship_Max_Cargo, max_Delivery_Locations,
     return selected_contracts, used_locations, total_pay
 
 
-def find_best_start_location(contracts, ship_Max_Cargo, max_Delivery_Locations):
+def find_top_routes(contracts, ship_Max_Cargo, max_Delivery_Locations, top_n=5):
     """
-    Tries all from_Location options in contracts and returns the best route
+    Tries all from_Location options in contracts and returns top N routes sorted by total profit
     """
     unique_from_locations = set()
     for c in contracts:
@@ -138,8 +138,7 @@ def find_best_start_location(contracts, ship_Max_Cargo, max_Delivery_Locations):
         for loc in from_locs:
             unique_from_locations.add(loc)
 
-    best_route = None
-    best_total_pay = 0
+    routes = []
 
     for start_loc in unique_from_locations:
         # Filter contracts that start from start_loc (including multi-from)
@@ -153,12 +152,13 @@ def find_best_start_location(contracts, ship_Max_Cargo, max_Delivery_Locations):
         selected_contracts, used_locations, total_pay = select_contracts(
             filtered_contracts, ship_Max_Cargo, max_Delivery_Locations, start_loc=start_loc)
 
-        if total_pay > best_total_pay:
-            best_total_pay = total_pay
-            best_route = (selected_contracts, used_locations,
-                          total_pay, start_loc)
+        if selected_contracts:
+            routes.append(
+                (selected_contracts, used_locations, total_pay, start_loc))
 
-    return best_route
+    # Sort by total pay descending and return top N
+    routes.sort(key=lambda r: r[2], reverse=True)
+    return routes[:top_n]
 
 
 def find_backhaul_contracts(selected_contracts, all_contracts, ship_Max_Cargo, max_Delivery_Locations, start_loc):
@@ -288,7 +288,7 @@ def save_routes_to_markdown(routes, filename="route_Options.md", top_n=10):
                 f.write(f"  - {loc.name} on {loc.planet}\n")
 
             f.write("\n### Route Plan:\n")
-            f.write(f"  - Start: {start_loc.name}\n\n")
+            f.write(f"  - Start:\n    - {start_loc.name}\n\n")
 
             onboard_cargo = []
 
@@ -312,12 +312,15 @@ def save_routes_to_markdown(routes, filename="route_Options.md", top_n=10):
                 if dropoff:
                     f.write("  Dropoff:\n")
                     dropoff_summary = {}
+                    total_dropoff = 0
                     for cargo in dropoff:
                         key = cargo['item']
                         dropoff_summary[key] = dropoff_summary.get(
                             key, 0) + cargo['amount']
+                        total_dropoff += cargo['amount']
                     for item, amt in dropoff_summary.items():
-                        f.write(f"  - {amt} SCU {item}\n")
+                        f.write(f"   - {amt} SCU {item}\n")
+                    f.write(f"\n   - **Total Dropoff: {total_dropoff} SCU**\n")
                 else:
                     f.write("  Dropoff:\n    - None\n")
 
@@ -331,9 +334,9 @@ def save_routes_to_markdown(routes, filename="route_Options.md", top_n=10):
                             key, 0) + cargo['amount']
                         total_pickup += cargo['amount']
                     for (item, dest), amt in pickup_summary.items():
-                        f.write(f"    - {amt} SCU {item} -> {dest}\n")
+                        f.write(f"   - {amt} SCU {item} -> {dest}\n")
                     f.write(
-                        f"\n    - **Total Pickup: {total_pickup} SCU**\n\n")
+                        f"\n   - **Total Pickup: {total_pickup} SCU**\n\n")
                 else:
                     f.write("\n  Pickup:\n    - None\n\n")
 
@@ -367,24 +370,20 @@ def save_routes_to_markdown(routes, filename="route_Options.md", top_n=10):
 
 
 def main():
-    best_route = find_best_start_location(
-        contracts, ship_Max_Cargo, max_Delivery_Locations)
+    top_routes = find_top_routes(
+        contracts, ship_Max_Cargo, max_Delivery_Locations, top_n=5)
 
-    if not best_route:
-        print("No feasible route found.")
+    if not top_routes:
+        print("No feasible routes found.")
         return
 
-    selected_contracts, used_locations, total_pay, start_loc = best_route
+    full_routes = []
+    for selected_contracts, used_locations, total_pay, start_loc in top_routes:
+        backhauls = find_backhaul_contracts(
+            selected_contracts, contracts, ship_Max_Cargo, max_Delivery_Locations, start_loc)
 
-    # Find prioritized backhauls (preferred: those that deliver ONLY to start_loc)
-    backhauls = find_backhaul_contracts(
-        selected_contracts, contracts, ship_Max_Cargo, max_Delivery_Locations, start_loc)
-    if backhauls:
-        print(f"\nAdding {len(backhauls)
-                          } backhaul contracts (preferred first).")
         for b in backhauls:
-            if b not in selected_contracts:  # prevent duplicates
-                # Check if adding backhaul violates constraints globally
+            if b not in selected_contracts:
                 can_add, reason = can_add_contract_with_dynamic_cargo(
                     selected_contracts, b, ship_Max_Cargo, max_Delivery_Locations, start_loc=start_loc)
                 if can_add:
@@ -395,24 +394,21 @@ def main():
                     for _, _, dloc in b.deliveries:
                         used_locations.add(dloc)
                     total_pay += b.contract_Pay
-                else:
-                    print(f"Skipping backhaul contract from {', '.join(
-                        loc.name for loc in from_locs)} due to: {reason}")
 
-    print("\nSelection complete.")
-    print(f"Selected {len(selected_contracts)} contracts")
-    print(f"Total delivery amount: N/A (calculated dynamically)")
-    print(f"Total Profit: {total_pay:,} aUEC")
-    print("Delivery locations:")
-    for loc in used_locations:
-        print(f"- {loc.name} on {loc.planet}")
+        full_routes.append(
+            (selected_contracts, used_locations, total_pay, start_loc))
 
-    print("\nContracts:")
-    for con in selected_contracts:
-        print_Contract(con)
+    print(f"\nFound {len(full_routes)} route options.\n")
 
-    routes = [(selected_contracts, used_locations, total_pay, start_loc)]
-    save_routes_to_markdown(routes, top_n=1)
+    for i, (selected_contracts, used_locations, total_pay, start_loc) in enumerate(full_routes, 1):
+        print(f"Route Option {i}")
+        print(f"Start Location: {start_loc.name}")
+        print(f"Total Profit: {total_pay:,} aUEC")
+        print(f"Contracts: {len(selected_contracts)}")
+        print("----")
+
+    # Save all top routes to markdown
+    save_routes_to_markdown(full_routes, top_n=len(full_routes))
 
 
 if __name__ == "__main__":
