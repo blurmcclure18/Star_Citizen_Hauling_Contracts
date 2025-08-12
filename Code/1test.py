@@ -28,7 +28,8 @@ def print_Contract(con):
 
 ship_Max_Cargo = 224
 max_Delivery_Locations = 5
-contracts = mc  # or hu, or combined list
+# Combine microTech and Hurston contracts for global selection
+contracts = mc + hu
 
 
 def can_add_contract_with_dynamic_cargo(selected_contracts, candidate_contract, ship_Max_Cargo, max_Delivery_Locations, start_loc=None):
@@ -94,6 +95,10 @@ def can_add_contract_with_dynamic_cargo(selected_contracts, candidate_contract, 
 
 
 def select_contracts(filtered_contracts, ship_Max_Cargo, max_Delivery_Locations, start_loc=None):
+    """
+    Greedy selection of contracts from filtered_contracts by profitability,
+    strictly enforcing max stops and cargo constraints globally.
+    """
     contract_info = []
     for c in filtered_contracts:
         total_amount = sum(amount for amount, _, _ in c.deliveries)
@@ -242,11 +247,22 @@ def save_routes_to_markdown(routes, filename="route_Options.md", top_n=10):
             ordered_contracts = order_contracts_by_route(
                 selected_contracts, start_loc)
 
+            # Build locations_order based on route traversal order
             locations_order = [start_loc]
+
+            visited = set(locations_order)
+            # For each contract in order, add from_Location and deliveries in sequence if new
             for con in ordered_contracts:
-                for _, _, loc in con.deliveries:
-                    if loc not in locations_order:
+                from_locs = con.from_Location if isinstance(
+                    con.from_Location, list) else [con.from_Location]
+                for loc in from_locs:
+                    if loc not in visited:
                         locations_order.append(loc)
+                        visited.add(loc)
+                for _, _, dloc in con.deliveries:
+                    if dloc not in visited:
+                        locations_order.append(dloc)
+                        visited.add(dloc)
 
             contract_cargo = {}
             for con in ordered_contracts:
@@ -368,13 +384,20 @@ def main():
                           } backhaul contracts (preferred first).")
         for b in backhauls:
             if b not in selected_contracts:  # prevent duplicates
-                selected_contracts.append(b)
-                from_locs = b.from_Location if isinstance(
-                    b.from_Location, list) else [b.from_Location]
-                used_locations.update(from_locs)
-                for _, _, dloc in b.deliveries:
-                    used_locations.add(dloc)
-                total_pay += b.contract_Pay
+                # Check if adding backhaul violates constraints globally
+                can_add, reason = can_add_contract_with_dynamic_cargo(
+                    selected_contracts, b, ship_Max_Cargo, max_Delivery_Locations, start_loc=start_loc)
+                if can_add:
+                    selected_contracts.append(b)
+                    from_locs = b.from_Location if isinstance(
+                        b.from_Location, list) else [b.from_Location]
+                    used_locations.update(from_locs)
+                    for _, _, dloc in b.deliveries:
+                        used_locations.add(dloc)
+                    total_pay += b.contract_Pay
+                else:
+                    print(f"Skipping backhaul contract from {', '.join(
+                        loc.name for loc in from_locs)} due to: {reason}")
 
     print("\nSelection complete.")
     print(f"Selected {len(selected_contracts)} contracts")
