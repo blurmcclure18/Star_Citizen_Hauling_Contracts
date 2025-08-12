@@ -2,245 +2,429 @@
 
 ## Ship Used for Route Planning:
 
-- Name: HULL-C
-- Max Cargo Capacity: 4608 SCU
+- Name: Starlancer MAX
+- Max Cargo Capacity: 224 SCU
 - Max Container Size: 32 SCU
-- Capabilities: Interstellar
+- Capabilities: Local, Planetary, Solar, Interstellar
 
 ## Route Option 1
 
 ### Route Summary:
 
-  - **Total Profit:** 1,722,750 aUEC  
-  - **Number of Contracts:** 11  
-  - **Total stops (unique locations):** 4
+  - **Total Profit:** 1,152,000 aUEC  
+  - **Number of Contracts:** 16  
+  - **Total stops (unique locations):** 6
 
-#### Route Guide:
- 1. Everus Harbor -->
- 2. Pyro Gateway -->
- 3. Terra Gateway -->
- 4. Magnus Gateway -->
- 5. Everus Harbor
-
-### Locations:
-  - Terra Gateway on None
-  - Magnus Gateway on None
-  - Everus Harbor on Hurston
-  - Pyro Gateway on None
+### Route Guide:
+ 1. Port Tressler -->
+ 2. MIC-L4 -->
+ 3. MIC-L2 -->
+ 4. MIC-L5 -->
+ 5. MIC-L1 -->
+ 6. MIC-L3 -->
+ 7. Port Tressler
 
 ### Route Plan:
   - Start:
-    - Everus Harbor
+    - Port Tressler
 
-**Everus Harbor:**
+#### **Port Tressler:**
 
   Dropoff:
     - None
 
   Pickup:
-   - 18 SCU Agricultural Supplies -> Pyro Gateway
-   - 104 SCU Agricultural Supplies -> Terra Gateway
-   - 518 SCU Waste -> Pyro Gateway
-   - 3403 SCU Hydrogen -> Magnus Gateway
+   - 2 SCU Stims -> MIC-L1
+   - 14 SCU Stims -> MIC-L3
+   - 10 SCU Stims -> MIC-L2
+   - 6 SCU Stims -> MIC-L5
+   - 14 SCU Pressurized Ice -> MIC-L3
+   - 12 SCU Pressurized Ice -> MIC-L4
+   - 12 SCU Processed Food -> MIC-L1
+   - 11 SCU Processed Food -> MIC-L2
+   - 5 SCU Pressurized Ice -> MIC-L2
+   - 6 SCU Stims -> MIC-L4
+   - 5 SCU Pressurized Ice -> MIC-L5
+   - 7 SCU Processed Food -> MIC-L5
+   - 6 SCU Processed Food -> MIC-L4
+   - 7 SCU Processed Food -> MIC-L3
+   - 103 SCU Quartz (Raw) -> MIC-L2
 
-   - **Total Pickup: 4043 SCU**
+   - **Total Pickup: 220 SCU**
 
-**Pyro Gateway:**
+**Current Cargo:** 220 SCU
 
-  Dropoff:
-   - 18 SCU Agricultural Supplies
-   - 518 SCU Waste
-
-   - **Total Dropoff: 536 SCU**
-
-  Pickup:
-   - 86 SCU Tin -> Everus Harbor
-   - 269 SCU Pressurized Ice -> Everus Harbor
-
-   - **Total Pickup: 355 SCU**
-
-**Terra Gateway:**
-
-  Dropoff:
-   - 104 SCU Agricultural Supplies
-
-   - **Total Dropoff: 104 SCU**
-
-  Pickup:
-   - 558 SCU Carbon -> Magnus Gateway
-
-   - **Total Pickup: 558 SCU**
-
-**Magnus Gateway:**
+#### **MIC-L4:**
 
   Dropoff:
-   - 3403 SCU Hydrogen
-   - 558 SCU Carbon
+   - 12 SCU Pressurized Ice
+   - 6 SCU Stims
+   - 6 SCU Processed Food
 
-   - **Total Dropoff: 3961 SCU**
+   - **Total Dropoff: 24 SCU**
 
   Pickup:
-   - 96 SCU Stims -> Everus Harbor
-   - 622 SCU Waste -> Pyro Gateway
-   - 639 SCU Silicon -> Pyro Gateway
+   - 18 SCU Waste -> Port Tressler
+   - 16 SCU Scrap -> Port Tressler
 
-   - **Total Pickup: 1357 SCU**
+   - **Total Pickup: 34 SCU**
+
+**Current Cargo:** 230 SCU
+
+#### **MIC-L2:**
+
+  Dropoff:
+   - 10 SCU Stims
+   - 11 SCU Processed Food
+   - 5 SCU Pressurized Ice
+   - 103 SCU Quartz (Raw)
+
+   - **Total Dropoff: 129 SCU**
+
+  Pickup:
+   - 6 SCU Waste -> Port Tressler
+   - 6 SCU Scrap -> Port Tressler
+   - 10 SCU Carbon -> Port Tressler
+   - 84 SCU Silicon -> Port Tressler
+   - 11 SCU Silicon -> MIC-L3
+
+   - **Total Pickup: 117 SCU**
+
+**Current Cargo:** 218 SCU
+
+#### **MIC-L5:**
+
+  Dropoff:
+   - 6 SCU Stims
+   - 5 SCU Pressurized Ice
+   - 7 SCU Processed Food
+
+   - **Total Dropoff: 18 SCU**
+
+  Pickup:
+   - 6 SCU Waste -> Port Tressler
+   - 6 SCU Scrap -> Port Tressler
+
+   - **Total Pickup: 12 SCU**
+
+**Current Cargo:** 212 SCU
+
+#### **MIC-L1:**
+
+  Dropoff:
+   - 2 SCU Stims
+   - 12 SCU Processed Food
+
+   - **Total Dropoff: 14 SCU**
+
+  Pickup:
+   - 18 SCU Waste -> Port Tressler
+   - 16 SCU Scrap -> Port Tressler
+
+   - **Total Pickup: 34 SCU**
+
+**Current Cargo:** 232 SCU
+
+#### **MIC-L3:**
+
+  Dropoff:
+   - 14 SCU Stims
+   - 14 SCU Pressurized Ice
+   - 7 SCU Processed Food
+   - 11 SCU Silicon
+
+   - **Total Dropoff: 46 SCU**
+
+  Pickup:
+   - 10 SCU Waste -> Port Tressler
+   - 10 SCU Scrap -> Port Tressler
+
+   - **Total Pickup: 20 SCU**
+
+**Current Cargo:** 206 SCU
+
+#### **Port Tressler:**
+
+  Dropoff:
+   - 58 SCU Waste
+   - 54 SCU Scrap
+   - 10 SCU Carbon
+   - 84 SCU Silicon
+
+   - **Total Dropoff: 206 SCU**
+
+  Pickup:
+   - 2 SCU Stims -> MIC-L1
+   - 14 SCU Stims -> MIC-L3
+   - 10 SCU Stims -> MIC-L2
+   - 6 SCU Stims -> MIC-L5
+   - 14 SCU Pressurized Ice -> MIC-L3
+   - 12 SCU Pressurized Ice -> MIC-L4
+   - 12 SCU Processed Food -> MIC-L1
+   - 11 SCU Processed Food -> MIC-L2
+   - 5 SCU Pressurized Ice -> MIC-L2
+   - 6 SCU Stims -> MIC-L4
+   - 5 SCU Pressurized Ice -> MIC-L5
+   - 7 SCU Processed Food -> MIC-L5
+   - 6 SCU Processed Food -> MIC-L4
+   - 7 SCU Processed Food -> MIC-L3
+   - 103 SCU Quartz (Raw) -> MIC-L2
+
+   - **Total Pickup: 220 SCU**
+
+**Current Cargo:** 220 SCU
 
 
 ### Contracts (in recommended pickup/delivery order):
 
-- #### Rookie Rank - Direct Interstellar Small Cargo
+- #### Experienced Rank - Solar Small Cargo
   - Type: Small
 
   - From:
-    - Everus Harbor
+    - Port Tressler
 
   - To:
-    - 9 SCU Agricultural Supplies -> Pyro Gateway on None
+    - 2 SCU Stims -> MIC-L1 on None
+    - 2 SCU Stims -> MIC-L3 on None
+    - 2 SCU Stims -> MIC-L2 on None
+    - 2 SCU Stims -> MIC-L5 on None
 
   - Max Container Size: 4 SCU
 
-  - Pay: 40,000 aUEC
+  - Pay: 93,750 aUEC
 
 
-- #### Rookie Rank - Direct Interstellar Small Cargo
+- #### Member Rank - Solar Small Cargo
   - Type: Small
 
   - From:
-    - Everus Harbor
+    - Port Tressler
 
   - To:
-    - 9 SCU Agricultural Supplies -> Pyro Gateway on None
+    - 4 SCU Stims -> MIC-L5 on None
+    - 3 SCU Stims -> MIC-L3 on None
+    - 3 SCU Stims -> MIC-L2 on None
 
   - Max Container Size: 4 SCU
 
-  - Pay: 40,000 aUEC
+  - Pay: 96,500 aUEC
 
 
-- #### Junior Rank - Direct Interstellar Medium Cargo
+- #### Experienced Rank - Solar Small Cargo
+  - Type: Small
+
+  - From:
+    - Port Tressler
+
+  - To:
+    - 4 SCU Pressurized Ice -> MIC-L3 on None
+    - 3 SCU Pressurized Ice -> MIC-L4 on None
+    - 6 SCU Processed Food -> MIC-L1 on None
+    - 4 SCU Processed Food -> MIC-L2 on None
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 135,250 aUEC
+
+
+- #### Experienced Rank - Solar Small Cargo
+  - Type: Small
+
+  - From:
+    - Port Tressler
+
+  - To:
+    - 5 SCU Pressurized Ice -> MIC-L2 on None
+    - 6 SCU Pressurized Ice -> MIC-L4 on None
+    - 6 SCU Processed Food -> MIC-L1 on None
+    - 7 SCU Processed Food -> MIC-L2 on None
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 121,000 aUEC
+
+
+- #### Rookie Rank - Direct Solar Small Cargo
+  - Type: Small
+
+  - From:
+    - Port Tressler
+
+  - To:
+    - 9 SCU Stims -> MIC-L3 on None
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 44,500 aUEC
+
+
+- #### Rookie Rank - Solar Small Cargo
+  - Type: Small
+
+  - From:
+    - Port Tressler
+
+  - To:
+    - 6 SCU Stims -> MIC-L4 on None
+    - 5 SCU Stims -> MIC-L2 on None
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 50,250 aUEC
+
+
+- #### Junior Rank - Solar Small Cargo
+  - Type: Small
+
+  - From:
+    - Port Tressler
+
+  - To:
+    - 5 SCU Pressurized Ice -> MIC-L5 on None
+    - 3 SCU Pressurized Ice -> MIC-L4 on None
+    - 7 SCU Processed Food -> MIC-L5 on None
+    - 6 SCU Processed Food -> MIC-L4 on None
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 64,500 aUEC
+
+
+- #### Junior Rank - Direct Solar Small Cargo
+  - Type: Small
+
+  - From:
+    - Port Tressler
+
+  - To:
+    - 10 SCU Pressurized Ice -> MIC-L3 on None
+    - 7 SCU Processed Food -> MIC-L3 on None
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 49,500 aUEC
+
+
+- #### Rookie Rank - Solar Medium Cargo
   - Type: Medium
 
   - From:
-    - Everus Harbor
+    - Port Tressler
 
   - To:
-    - 104 SCU Agricultural Supplies -> Terra Gateway on None
+    - 103 SCU Quartz (Raw) -> MIC-L2 on None
 
   - Max Container Size: 8 SCU
 
-  - Pay: 59,750 aUEC
+  - Pay: 51,250 aUEC
 
 
-- #### Experienced Rank - Direct Interstellar Large Cargo
-  - Type: Large
-
-  - From:
-    - Everus Harbor
-
-  - To:
-    - 518 SCU Waste -> Pyro Gateway on None
-
-  - Max Container Size: 32 SCU
-
-  - Pay: 128,000 aUEC
-
-
-- #### Experienced Rank - Direct Interstellar Large Cargo
-  - Type: Large
+- #### Rookie Rank - Solar Small Cargo
+  - Type: Small
 
   - From:
-    - Everus Harbor
+    - MIC-L4, MIC-L1
 
   - To:
-    - 3403 SCU Hydrogen -> Magnus Gateway on None
+    - 3 SCU Waste -> Port Tressler on microTech
+    - 3 SCU Waste -> Port Tressler on microTech
+    - 3 SCU Scrap -> Port Tressler on microTech
+    - 2 SCU Scrap -> Port Tressler on microTech
 
-  - Max Container Size: 32 SCU
+  - Max Container Size: 4 SCU
 
-  - Pay: 698,750 aUEC
+  - Pay: 50,250 aUEC
 
 
-- #### Junior Rank - Direct Interstellar Medium Cargo
+- #### Member Rank - Solar Small Cargo
+  - Type: Small
+
+  - From:
+    - MIC-L4, MIC-L3, MIC-L1, MIC-L4
+
+  - To:
+    - 3 SCU Waste -> Port Tressler on microTech
+    - 3 SCU Scrap -> Port Tressler on microTech
+    - 3 SCU Waste -> Port Tressler on microTech
+    - 2 SCU Scrap -> Port Tressler on microTech
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 96,500 aUEC
+
+
+- #### Experienced Rank - Solar Small Cargo
+  - Type: Small
+
+  - From:
+    - MIC-L1, MIC-L2, MIC-L4, MIC-L5
+
+  - To:
+    - 3 SCU Waste -> Port Tressler on microTech
+    - 3 SCU Scrap -> Port Tressler on microTech
+    - 3 SCU Waste -> Port Tressler on microTech
+    - 3 SCU Scrap -> Port Tressler on microTech
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 93,750 aUEC
+
+
+- #### Rookie Rank - Direct Solar Small Cargo
+  - Type: Small
+
+  - From:
+    - MIC-L3
+
+  - To:
+    - 4 SCU Waste -> Port Tressler on microTech
+    - 5 SCU Scrap -> Port Tressler on microTech
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 44,500 aUEC
+
+
+- #### Rookie Rank - Direct Solar Extra Small Cargo
+  - Type: Extra Small
+
+  - From:
+    - MIC-L2
+
+  - To:
+    - 10 SCU Carbon -> Port Tressler on microTech
+
+  - Max Container Size: 1 SCU
+
+  - Pay: 45,750 aUEC
+
+
+- #### Rookie Rank - Direct Solar Medium Cargo
   - Type: Medium
 
   - From:
-    - Pyro Gateway
+    - MIC-L2
 
   - To:
-    - 86 SCU Tin -> Everus Harbor on Hurston
+    - 84 SCU Silicon -> Port Tressler on microTech
 
   - Max Container Size: 8 SCU
 
-  - Pay: 57,500 aUEC
+  - Pay: 51,250 aUEC
 
 
-- #### Experienced Rank - Direct Interstellar Medium Cargo
-  - Type: Medium
-
-  - From:
-    - Pyro Gateway
-
-  - To:
-    - 269 SCU Pressurized Ice -> Everus Harbor on Hurston
-
-  - Max Container Size: 16 SCU
-
-  - Pay: 163,500 aUEC
-
-
-- #### Experienced Rank - Direct Interstellar Large Cargo
-  - Type: Large
+- #### Rookie Rank - Direct Solar Extra Small Cargo
+  - Type: Extra Small
 
   - From:
-    - Terra Gateway
+    - MIC-L2
 
   - To:
-    - 558 SCU Carbon -> Magnus Gateway on None
+    - 11 SCU Silicon -> MIC-L3 on None
 
-  - Max Container Size: 32 SCU
+  - Max Container Size: 1 SCU
 
-  - Pay: 138,250 aUEC
-
-
-- #### Member Rank - Direct Interstellar Medium Cargo
-  - Type: Medium
-
-  - From:
-    - Magnus Gateway
-
-  - To:
-    - 96 SCU Stims -> Everus Harbor on Hurston
-
-  - Max Container Size: 8 SCU
-
-  - Pay: 101,250 aUEC
-
-
-- #### Experienced Rank - Direct Interstellar Large Cargo
-  - Type: Large
-
-  - From:
-    - Magnus Gateway
-
-  - To:
-    - 622 SCU Waste -> Pyro Gateway on None
-
-  - Max Container Size: 32 SCU
-
-  - Pay: 141,500 aUEC
-
-
-- #### Experienced Rank - Direct Interstellar Large Cargo
-  - Type: Large
-
-  - From:
-    - Magnus Gateway
-
-  - To:
-    - 639 SCU Silicon -> Pyro Gateway on None
-
-  - Max Container Size: 32 SCU
-
-  - Pay: 154,250 aUEC
+  - Pay: 63,500 aUEC
 
 
 ---
@@ -249,289 +433,468 @@
 
 ### Route Summary:
 
-  - **Total Profit:** 1,547,000 aUEC  
-  - **Number of Contracts:** 13  
-  - **Total stops (unique locations):** 6
+  - **Total Profit:** 1,059,250 aUEC  
+  - **Number of Contracts:** 17  
+  - **Total stops (unique locations):** 10
 
-#### Route Guide:
- 1. Pyro Gateway -->
- 2. Everus Harbor -->
- 3. Magnus Gateway -->
- 4. Terra Gateway -->
- 5. Baijini Point -->
- 6. Seraphim Station -->
- 7. Pyro Gateway
-
-### Locations:
-  - Magnus Gateway on None
-  - Baijini Point on ArcCorp
-  - Seraphim Station on Crusader
-  - Terra Gateway on None
-  - Everus Harbor on Hurston
-  - Pyro Gateway on None
+### Route Guide:
+ 1. microTech Logistics Depot S4LD13 -->
+ 2. Shubin Mining Facility SMCa-6 -->
+ 3. Shubin Mining Facility SMCa-8 -->
+ 4. microTech Logistics Depot S4LD01 -->
+ 5. Sakura Sun Goldenrod Workcenter -->
+ 6. Port Tressler -->
+ 7. Rayari McGrath Research Outpost -->
+ 8. Rayari Cantwell Research Outpost -->
+ 9. Rayari Anvik Research Outpost -->
+ 10. Rayari Kaltag Research Outpost
 
 ### Route Plan:
   - Start:
-    - Pyro Gateway
+    - microTech Logistics Depot S4LD13
 
-**Pyro Gateway:**
+#### **microTech Logistics Depot S4LD13:**
 
   Dropoff:
     - None
 
   Pickup:
-   - 86 SCU Tin -> Everus Harbor
-   - 269 SCU Pressurized Ice -> Everus Harbor
-   - 1408 SCU Pressurized Ice -> Magnus Gateway
+   - 10 SCU Waste -> Port Tressler
+   - 9 SCU Scrap -> Port Tressler
+   - 8 SCU Agricultural Supplies -> Rayari McGrath Research Outpost
+   - 11 SCU Stims -> Shubin Mining Facility SMCa-8
+   - 10 SCU Agricultural Supplies -> Port Tressler
+   - 9 SCU Quantum Fuel -> Rayari Cantwell Research Outpost
+   - 7 SCU Hydrogen Fuel -> Rayari Cantwell Research Outpost
+   - 7 SCU Ship Ammunition -> Rayari Cantwell Research Outpost
+   - 13 SCU Pressurized Ice -> Shubin Mining Facility SMCa-6
+   - 10 SCU Processed Food -> Shubin Mining Facility SMCa-6
 
-   - **Total Pickup: 1763 SCU**
+   - **Total Pickup: 94 SCU**
 
-**Everus Harbor:**
+**Current Cargo:** 94 SCU
 
-  Dropoff:
-   - 86 SCU Tin
-   - 269 SCU Pressurized Ice
-
-   - **Total Dropoff: 355 SCU**
-
-  Pickup:
-   - 18 SCU Agricultural Supplies -> Pyro Gateway
-   - 518 SCU Waste -> Pyro Gateway
-   - 1975 SCU Processed Food -> Pyro Gateway
-   - 104 SCU Agricultural Supplies -> Terra Gateway
-   - 48 SCU Tin -> Baijini Point
-   - 152 SCU Tin -> Seraphim Station
-
-   - **Total Pickup: 2815 SCU**
-
-**Magnus Gateway:**
+#### **Shubin Mining Facility SMCa-6:**
 
   Dropoff:
-   - 1408 SCU Pressurized Ice
+   - 13 SCU Pressurized Ice
+   - 10 SCU Processed Food
 
-   - **Total Dropoff: 1408 SCU**
+   - **Total Dropoff: 23 SCU**
 
   Pickup:
-   - 622 SCU Waste -> Pyro Gateway
-   - 639 SCU Silicon -> Pyro Gateway
-   - 96 SCU Stims -> Everus Harbor
+   - 5 SCU Waste -> Port Tressler
+   - 6 SCU Scrap -> Port Tressler
+   - 6 SCU Waste -> microTech Logistics Depot S4LD13
+   - 4 SCU Scrap -> microTech Logistics Depot S4LD13
 
-   - **Total Pickup: 1357 SCU**
+   - **Total Pickup: 21 SCU**
 
-**Terra Gateway:**
+**Current Cargo:** 92 SCU
+
+#### **Shubin Mining Facility SMCa-8:**
 
   Dropoff:
-   - 104 SCU Agricultural Supplies
+   - 11 SCU Stims
 
-   - **Total Dropoff: 104 SCU**
+   - **Total Dropoff: 11 SCU**
 
   Pickup:
+   - 5 SCU Waste -> Port Tressler
+   - 6 SCU Scrap -> Port Tressler
+
+   - **Total Pickup: 11 SCU**
+
+**Current Cargo:** 92 SCU
+
+#### **microTech Logistics Depot S4LD01:**
+
+  Dropoff:
     - None
 
-**Baijini Point:**
+  Pickup:
+   - 5 SCU Waste -> Port Tressler
+   - 4 SCU Scrap -> Port Tressler
+
+   - **Total Pickup: 9 SCU**
+
+**Current Cargo:** 101 SCU
+
+#### **Sakura Sun Goldenrod Workcenter:**
 
   Dropoff:
-   - 48 SCU Tin
-
-   - **Total Dropoff: 48 SCU**
-
-  Pickup:
     - None
 
-**Seraphim Station:**
+  Pickup:
+   - 10 SCU Waste -> Port Tressler
+   - 9 SCU Scrap -> Port Tressler
+
+   - **Total Pickup: 19 SCU**
+
+**Current Cargo:** 120 SCU
+
+#### **Port Tressler:**
 
   Dropoff:
-   - 152 SCU Tin
+   - 35 SCU Waste
+   - 34 SCU Scrap
+   - 10 SCU Agricultural Supplies
 
-   - **Total Dropoff: 152 SCU**
+   - **Total Dropoff: 79 SCU**
 
   Pickup:
+   - 10 SCU Agricultural Supplies -> microTech Logistics Depot S4LD13
+   - 18 SCU Hydrogen -> microTech Logistics Depot S4LD13
+   - 12 SCU Stims -> microTech Logistics Depot S4LD13
+   - 6 SCU Stims -> Rayari McGrath Research Outpost
+   - 4 SCU Stims -> Rayari Cantwell Research Outpost
+   - 7 SCU Pressurized Ice -> Rayari McGrath Research Outpost
+   - 3 SCU Pressurized Ice -> Rayari Cantwell Research Outpost
+   - 7 SCU Processed Food -> Rayari McGrath Research Outpost
+   - 6 SCU Processed Food -> Rayari Cantwell Research Outpost
+   - 4 SCU Hydrogen Fuel -> Rayari McGrath Research Outpost
+   - 4 SCU Hydrogen Fuel -> Rayari Cantwell Research Outpost
+   - 6 SCU Quantum Fuel -> Rayari Cantwell Research Outpost
+   - 6 SCU Ship Ammunition -> Rayari McGrath Research Outpost
+
+   - **Total Pickup: 93 SCU**
+
+**Current Cargo:** 134 SCU
+
+#### **Rayari McGrath Research Outpost:**
+
+  Dropoff:
+   - 8 SCU Agricultural Supplies
+   - 6 SCU Stims
+   - 7 SCU Pressurized Ice
+   - 7 SCU Processed Food
+   - 4 SCU Hydrogen Fuel
+   - 6 SCU Ship Ammunition
+
+   - **Total Dropoff: 38 SCU**
+
+  Pickup:
+   - 5 SCU Waste -> Port Tressler
+   - 2 SCU Scrap -> Port Tressler
+   - 3 SCU Scrap -> Rayari Cantwell Research Outpost
+   - 12 SCU Agricultural Supplies -> Port Tressler
+
+   - **Total Pickup: 22 SCU**
+
+**Current Cargo:** 118 SCU
+
+#### **Rayari Cantwell Research Outpost:**
+
+  Dropoff:
+   - 15 SCU Quantum Fuel
+   - 11 SCU Hydrogen Fuel
+   - 7 SCU Ship Ammunition
+   - 4 SCU Stims
+   - 3 SCU Pressurized Ice
+   - 6 SCU Processed Food
+   - 3 SCU Scrap
+
+   - **Total Dropoff: 49 SCU**
+
+  Pickup:
+   - 5 SCU Waste -> Port Tressler
+   - 2 SCU Scrap -> Port Tressler
+   - 3 SCU Scrap -> Rayari Cantwell Research Outpost
+
+   - **Total Pickup: 10 SCU**
+
+**Current Cargo:** 79 SCU
+
+#### **Rayari Anvik Research Outpost:**
+
+  Dropoff:
     - None
+
+  Pickup:
+   - 12 SCU Agricultural Supplies -> Port Tressler
+   - 5 SCU Waste -> Port Tressler
+   - 6 SCU Scrap -> Port Tressler
+
+   - **Total Pickup: 23 SCU**
+
+**Current Cargo:** 102 SCU
+
+#### **Rayari Kaltag Research Outpost:**
+
+  Dropoff:
+    - None
+
+  Pickup:
+   - 5 SCU Waste -> Port Tressler
+   - 6 SCU Scrap -> Port Tressler
+
+   - **Total Pickup: 11 SCU**
+
+**Current Cargo:** 113 SCU
 
 
 ### Contracts (in recommended pickup/delivery order):
 
-- #### Junior Rank - Direct Interstellar Medium Cargo
-  - Type: Medium
-
-  - From:
-    - Pyro Gateway
-
-  - To:
-    - 86 SCU Tin -> Everus Harbor on Hurston
-
-  - Max Container Size: 8 SCU
-
-  - Pay: 57,500 aUEC
-
-
-- #### Experienced Rank - Direct Interstellar Medium Cargo
-  - Type: Medium
-
-  - From:
-    - Pyro Gateway
-
-  - To:
-    - 269 SCU Pressurized Ice -> Everus Harbor on Hurston
-
-  - Max Container Size: 16 SCU
-
-  - Pay: 163,500 aUEC
-
-
-- #### Experienced Rank - Direct Interstellar Large Cargo
-  - Type: Large
-
-  - From:
-    - Pyro Gateway
-
-  - To:
-    - 1408 SCU Pressurized Ice -> Magnus Gateway on None
-
-  - Max Container Size: 32 SCU
-
-  - Pay: 267,250 aUEC
-
-
-- #### Rookie Rank - Direct Interstellar Small Cargo
+- #### Member Rank - Planetary Small Cargo
   - Type: Small
 
   - From:
-    - Everus Harbor
+    - microTech Logistics Depot S4LD13, microTech Logistics Depot S4LD01, Sakura Sun Goldenrod Workcenter, microTech Logistics Depot S4LD13
 
   - To:
-    - 9 SCU Agricultural Supplies -> Pyro Gateway on None
+    - 3 SCU Waste -> Port Tressler on microTech
+    - 2 SCU Scrap -> Port Tressler on microTech
+    - 2 SCU Waste -> Port Tressler on microTech
+    - 2 SCU Scrap -> Port Tressler on microTech
 
   - Max Container Size: 4 SCU
 
-  - Pay: 40,000 aUEC
+  - Pay: 95,000 aUEC
 
 
-- #### Experienced Rank - Direct Interstellar Large Cargo
-  - Type: Large
-
-  - From:
-    - Everus Harbor
-
-  - To:
-    - 518 SCU Waste -> Pyro Gateway on None
-
-  - Max Container Size: 32 SCU
-
-  - Pay: 128,000 aUEC
-
-
-- #### Experienced Rank - Direct Interstellar Large Cargo
-  - Type: Large
-
-  - From:
-    - Everus Harbor
-
-  - To:
-    - 1975 SCU Processed Food -> Pyro Gateway on None
-
-  - Max Container Size: 32 SCU
-
-  - Pay: 267,000 aUEC
-
-
-- #### Rookie Rank - Direct Interstellar Small Cargo
+- #### Junior Rank - Direct Local Small Cargo
   - Type: Small
 
   - From:
-    - Everus Harbor
+    - microTech Logistics Depot S4LD13
 
   - To:
-    - 9 SCU Agricultural Supplies -> Pyro Gateway on None
+    - 8 SCU Agricultural Supplies -> Rayari McGrath Research Outpost on Clio
 
   - Max Container Size: 4 SCU
 
-  - Pay: 40,000 aUEC
+  - Pay: 52,500 aUEC
 
 
-- #### Junior Rank - Direct Interstellar Medium Cargo
-  - Type: Medium
+- #### Junior Rank - Planetary Small Cargo
+  - Type: Small
 
   - From:
-    - Everus Harbor
+    - Sakura Sun Goldenrod Workcenter, microTech Logistics Depot S4LD13
 
   - To:
-    - 104 SCU Agricultural Supplies -> Terra Gateway on None
+    - 2 SCU Waste -> Port Tressler on microTech
+    - 3 SCU Waste -> Port Tressler on microTech
+    - 3 SCU Scrap -> Port Tressler on microTech
+    - 2 SCU Scrap -> Port Tressler on microTech
 
-  - Max Container Size: 8 SCU
+  - Max Container Size: 4 SCU
 
   - Pay: 59,750 aUEC
 
 
-- #### Junior Rank - Solar Medium Cargo
-  - Type: Medium
+- #### Junior Rank - Direct Local Small Cargo
+  - Type: Small
 
   - From:
-    - Everus Harbor
+    - microTech Logistics Depot S4LD13
 
   - To:
-    - 48 SCU Tin -> Baijini Point on ArcCorp
-    - 43 SCU Tin -> Seraphim Station on Crusader
+    - 11 SCU Stims -> Shubin Mining Facility SMCa-8 on Calliope
 
-  - Max Container Size: 8 SCU
+  - Max Container Size: 4 SCU
 
-  - Pay: 69,250 aUEC
+  - Pay: 52,500 aUEC
 
 
-- #### Junior Rank - Direct Solar Medium Cargo
-  - Type: Medium
+- #### Rookie Rank - Direct Planetary Small Cargo
+  - Type: Small
 
   - From:
-    - Everus Harbor
+    - microTech Logistics Depot S4LD13
 
   - To:
-    - 109 SCU Tin -> Seraphim Station on Crusader
+    - 10 SCU Agricultural Supplies -> Port Tressler on microTech
 
-  - Max Container Size: 8 SCU
+  - Max Container Size: 4 SCU
 
-  - Pay: 57,750 aUEC
+  - Pay: 45,000 aUEC
 
 
-- #### Experienced Rank - Direct Interstellar Large Cargo
-  - Type: Large
+- #### Junior Rank - Direct Local Small Cargo
+  - Type: Small
 
   - From:
-    - Magnus Gateway
+    - microTech Logistics Depot S4LD13
 
   - To:
-    - 622 SCU Waste -> Pyro Gateway on None
+    - 9 SCU Quantum Fuel -> Rayari Cantwell Research Outpost on Clio
+    - 7 SCU Hydrogen Fuel -> Rayari Cantwell Research Outpost on Clio
+    - 7 SCU Ship Ammunition -> Rayari Cantwell Research Outpost on Clio
 
-  - Max Container Size: 32 SCU
+  - Max Container Size: 4 SCU
 
-  - Pay: 141,500 aUEC
+  - Pay: 60,750 aUEC
 
 
-- #### Experienced Rank - Direct Interstellar Large Cargo
-  - Type: Large
+- #### Junior Rank - Direct Local Small Cargo
+  - Type: Small
 
   - From:
-    - Magnus Gateway
+    - microTech Logistics Depot S4LD13
 
   - To:
-    - 639 SCU Silicon -> Pyro Gateway on None
+    - 13 SCU Pressurized Ice -> Shubin Mining Facility SMCa-6 on Calliope
+    - 10 SCU Processed Food -> Shubin Mining Facility SMCa-6 on Calliope
 
-  - Max Container Size: 32 SCU
+  - Max Container Size: 4 SCU
 
-  - Pay: 154,250 aUEC
+  - Pay: 60,750 aUEC
 
 
-- #### Member Rank - Direct Interstellar Medium Cargo
-  - Type: Medium
+- #### Rookie Rank - Direct Planetary Small Cargo
+  - Type: Small
 
   - From:
-    - Magnus Gateway
+    - Port Tressler
 
   - To:
-    - 96 SCU Stims -> Everus Harbor on Hurston
+    - 10 SCU Agricultural Supplies -> microTech Logistics Depot S4LD13 on microTech
 
-  - Max Container Size: 8 SCU
+  - Max Container Size: 4 SCU
 
-  - Pay: 101,250 aUEC
+  - Pay: 37,250 aUEC
+
+
+- #### Rookie Rank - Direct Planetary Small Cargo
+  - Type: Small
+
+  - From:
+    - Port Tressler
+
+  - To:
+    - 18 SCU Hydrogen -> microTech Logistics Depot S4LD13 on microTech
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 43,750 aUEC
+
+
+- #### Rookie Rank - Direct Planetary Small Cargo
+  - Type: Small
+
+  - From:
+    - Port Tressler
+
+  - To:
+    - 12 SCU Stims -> microTech Logistics Depot S4LD13 on microTech
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 37,250 aUEC
+
+
+- #### Rookie Rank - Planetary Small Cargo
+  - Type: Small
+
+  - From:
+    - Port Tressler
+
+  - To:
+    - 6 SCU Stims -> Rayari McGrath Research Outpost on Clio
+    - 4 SCU Stims -> Rayari Cantwell Research Outpost on Clio
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 48,500 aUEC
+
+
+- #### Junior Rank - Planetary Small Cargo
+  - Type: Small
+
+  - From:
+    - Port Tressler
+
+  - To:
+    - 7 SCU Pressurized Ice -> Rayari McGrath Research Outpost on Clio
+    - 3 SCU Pressurized Ice -> Rayari Cantwell Research Outpost on Clio
+    - 7 SCU Processed Food -> Rayari McGrath Research Outpost on Clio
+    - 6 SCU Processed Food -> Rayari Cantwell Research Outpost on Clio
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 65,250 aUEC
+
+
+- #### Junior Rank - Planetary Small Cargo
+  - Type: Small
+
+  - From:
+    - Port Tressler
+
+  - To:
+    - 4 SCU Hydrogen Fuel -> Rayari McGrath Research Outpost on Clio
+    - 4 SCU Hydrogen Fuel -> Rayari Cantwell Research Outpost on Clio
+    - 6 SCU Quantum Fuel -> Rayari Cantwell Research Outpost on Clio
+    - 6 SCU Ship Ammunition -> Rayari McGrath Research Outpost on Clio
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 65,250 aUEC
+
+
+- #### Junior Rank - Planetary Small Cargo
+  - Type: Small
+
+  - From:
+    - Rayari McGrath Research Outpost, Rayari Cantwell Research Outpost
+
+  - To:
+    - 3 SCU Waste -> Port Tressler on microTech
+    - 2 SCU Waste -> Port Tressler on microTech
+    - 2 SCU Scrap -> Port Tressler on microTech
+    - 3 SCU Scrap -> Rayari Cantwell Research Outpost on Clio
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 59,750 aUEC
+
+
+- #### Junior Rank - Planetary Small Cargo
+  - Type: Small
+
+  - From:
+    - Rayari Anvik Research Outpost, Rayari McGrath Research Outpost
+
+  - To:
+    - 6 SCU Agricultural Supplies -> Port Tressler on microTech
+    - 6 SCU Agricultural Supplies -> Port Tressler on microTech
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 59,750 aUEC
+
+
+- #### Experienced Rank - Planetary Small Cargo
+  - Type: Small
+
+  - From:
+    - Shubin Mining Facility SMCa-8, Rayari Anvik Research Outpost, Rayari Kaltag Research Outpost, Shubin Mining Facility SMCa-6
+
+  - To:
+    - 3 SCU Waste -> Port Tressler on microTech
+    - 3 SCU Scrap -> Port Tressler on microTech
+    - 2 SCU Waste -> Port Tressler on microTech
+    - 3 SCU Scrap -> Port Tressler on microTech
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 163,750 aUEC
+
+
+- #### Junior Rank - Direct Local Small Cargo
+  - Type: Small
+
+  - From:
+    - Shubin Mining Facility SMCa-6
+
+  - To:
+    - 6 SCU Waste -> microTech Logistics Depot S4LD13 on microTech
+    - 4 SCU Scrap -> microTech Logistics Depot S4LD13 on microTech
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 52,500 aUEC
 
 
 ---
@@ -540,193 +903,366 @@
 
 ### Route Summary:
 
-  - **Total Profit:** 1,547,000 aUEC  
-  - **Number of Contracts:** 13  
+  - **Total Profit:** 995,500 aUEC  
+  - **Number of Contracts:** 18  
   - **Total stops (unique locations):** 6
 
-#### Route Guide:
- 1. Magnus Gateway -->
- 2. Everus Harbor -->
- 3. Pyro Gateway -->
- 4. Terra Gateway -->
- 5. Baijini Point -->
- 6. Seraphim Station -->
- 7. Magnus Gateway
-
-### Locations:
-  - Magnus Gateway on None
-  - Baijini Point on ArcCorp
-  - Seraphim Station on Crusader
-  - Terra Gateway on None
-  - Everus Harbor on Hurston
-  - Pyro Gateway on None
+### Route Guide:
+ 1. Seraphim Station -->
+ 2. Port Tressler -->
+ 3. Greycat Stanton IV Production Complex-A -->
+ 4. Everus Harbor -->
+ 5. New Babbage -->
+ 6. Sakura Sun Goldenrod Workcenter
 
 ### Route Plan:
   - Start:
-    - Magnus Gateway
+    - Seraphim Station
 
-**Magnus Gateway:**
+#### **Seraphim Station:**
 
   Dropoff:
     - None
 
   Pickup:
-   - 96 SCU Stims -> Everus Harbor
-   - 639 SCU Silicon -> Pyro Gateway
-   - 622 SCU Waste -> Pyro Gateway
+   - 8 SCU Carbon -> Port Tressler
+   - 27 SCU Carbon -> Everus Harbor
+   - 38 SCU Agricultural Supplies -> Everus Harbor
 
-   - **Total Pickup: 1357 SCU**
+   - **Total Pickup: 73 SCU**
 
-**Everus Harbor:**
+**Current Cargo:** 73 SCU
+
+#### **Port Tressler:**
 
   Dropoff:
-   - 96 SCU Stims
+   - 8 SCU Carbon
 
-   - **Total Dropoff: 96 SCU**
+   - **Total Dropoff: 8 SCU**
 
   Pickup:
-   - 18 SCU Agricultural Supplies -> Pyro Gateway
-   - 104 SCU Agricultural Supplies -> Terra Gateway
-   - 48 SCU Tin -> Baijini Point
-   - 152 SCU Tin -> Seraphim Station
-   - 518 SCU Waste -> Pyro Gateway
-   - 1975 SCU Processed Food -> Pyro Gateway
+   - 20 SCU Agricultural Supplies -> Everus Harbor
+   - 44 SCU Pressurized Ice -> Seraphim Station
+   - 5 SCU Carbon -> Greycat Stanton IV Production Complex-A
+   - 14 SCU Carbon -> Sakura Sun Goldenrod Workcenter
+   - 4 SCU Titanium -> Greycat Stanton IV Production Complex-A
+   - 3 SCU Titanium -> New Babbage
+   - 5 SCU Quartz -> Greycat Stanton IV Production Complex-A
+   - 4 SCU Quartz -> Sakura Sun Goldenrod Workcenter
+   - 5 SCU Aluminum -> New Babbage
+   - 4 SCU Aluminum -> Sakura Sun Goldenrod Workcenter
+   - 11 SCU Silicon -> Sakura Sun Goldenrod Workcenter
+   - 11 SCU Titanium -> Sakura Sun Goldenrod Workcenter
 
-   - **Total Pickup: 2815 SCU**
+   - **Total Pickup: 130 SCU**
 
-**Pyro Gateway:**
+**Current Cargo:** 195 SCU
 
-  Dropoff:
-   - 639 SCU Silicon
-   - 1140 SCU Waste
-   - 18 SCU Agricultural Supplies
-   - 1975 SCU Processed Food
-
-   - **Total Dropoff: 3772 SCU**
-
-  Pickup:
-   - 1408 SCU Pressurized Ice -> Magnus Gateway
-   - 86 SCU Tin -> Everus Harbor
-   - 269 SCU Pressurized Ice -> Everus Harbor
-
-   - **Total Pickup: 1763 SCU**
-
-**Terra Gateway:**
+#### **Greycat Stanton IV Production Complex-A:**
 
   Dropoff:
-   - 104 SCU Agricultural Supplies
+   - 5 SCU Carbon
+   - 4 SCU Titanium
+   - 5 SCU Quartz
 
-   - **Total Dropoff: 104 SCU**
+   - **Total Dropoff: 14 SCU**
 
   Pickup:
     - None
 
-**Baijini Point:**
+**Current Cargo:** 181 SCU
+
+#### **Everus Harbor:**
 
   Dropoff:
-   - 48 SCU Tin
+   - 27 SCU Carbon
+   - 58 SCU Agricultural Supplies
 
-   - **Total Dropoff: 48 SCU**
+   - **Total Dropoff: 85 SCU**
+
+  Pickup:
+   - 109 SCU Tin -> Seraphim Station
+
+   - **Total Pickup: 109 SCU**
+
+**Current Cargo:** 205 SCU
+
+#### **New Babbage:**
+
+  Dropoff:
+   - 3 SCU Titanium
+   - 5 SCU Aluminum
+
+   - **Total Dropoff: 8 SCU**
 
   Pickup:
     - None
 
-**Seraphim Station:**
+**Current Cargo:** 197 SCU
+
+#### **Sakura Sun Goldenrod Workcenter:**
 
   Dropoff:
-   - 152 SCU Tin
+   - 14 SCU Carbon
+   - 4 SCU Quartz
+   - 4 SCU Aluminum
+   - 11 SCU Silicon
+   - 11 SCU Titanium
 
-   - **Total Dropoff: 152 SCU**
+   - **Total Dropoff: 44 SCU**
 
   Pickup:
     - None
+
+**Current Cargo:** 153 SCU
 
 
 ### Contracts (in recommended pickup/delivery order):
 
-- #### Member Rank - Direct Interstellar Medium Cargo
-  - Type: Medium
+- #### Rookie Rank - Solar Extra Small Cargo
+  - Type: Extra Small
 
   - From:
-    - Magnus Gateway
+    - Seraphim Station
 
   - To:
-    - 96 SCU Stims -> Everus Harbor on Hurston
+    - 4 SCU Carbon -> Port Tressler on microTech
+    - 3 SCU Carbon -> Everus Harbor on Hurston
 
-  - Max Container Size: 8 SCU
+  - Max Container Size: 1 SCU
 
-  - Pay: 101,250 aUEC
+  - Pay: 63,250 aUEC
 
 
-- #### Experienced Rank - Direct Interstellar Large Cargo
-  - Type: Large
+- #### Rookie Rank - Solar Extra Small Cargo
+  - Type: Extra Small
 
   - From:
-    - Magnus Gateway
+    - Seraphim Station
 
   - To:
-    - 639 SCU Silicon -> Pyro Gateway on None
+    - 4 SCU Carbon -> Port Tressler on microTech
+    - 4 SCU Carbon -> Everus Harbor on Hurston
 
-  - Max Container Size: 32 SCU
+  - Max Container Size: 1 SCU
 
-  - Pay: 154,250 aUEC
-
-
-- #### Experienced Rank - Direct Interstellar Large Cargo
-  - Type: Large
-
-  - From:
-    - Magnus Gateway
-
-  - To:
-    - 622 SCU Waste -> Pyro Gateway on None
-
-  - Max Container Size: 32 SCU
-
-  - Pay: 141,500 aUEC
+  - Pay: 63,250 aUEC
 
 
-- #### Rookie Rank - Direct Interstellar Small Cargo
+- #### Junior Rank - Solar Small Cargo
   - Type: Small
 
   - From:
-    - Everus Harbor
+    - Seraphim Station, Port Tressler
 
   - To:
-    - 9 SCU Agricultural Supplies -> Pyro Gateway on None
+    - 6 SCU Agricultural Supplies -> Everus Harbor on Hurston
+    - 4 SCU Agricultural Supplies -> Everus Harbor on Hurston
 
   - Max Container Size: 4 SCU
 
-  - Pay: 40,000 aUEC
+  - Pay: 57,000 aUEC
 
 
-- #### Junior Rank - Direct Interstellar Medium Cargo
-  - Type: Medium
-
-  - From:
-    - Everus Harbor
-
-  - To:
-    - 104 SCU Agricultural Supplies -> Terra Gateway on None
-
-  - Max Container Size: 8 SCU
-
-  - Pay: 59,750 aUEC
-
-
-- #### Junior Rank - Solar Medium Cargo
-  - Type: Medium
+- #### Junior Rank - Solar Small Cargo
+  - Type: Small
 
   - From:
-    - Everus Harbor
+    - Seraphim Station, Port Tressler
 
   - To:
-    - 48 SCU Tin -> Baijini Point on ArcCorp
-    - 43 SCU Tin -> Seraphim Station on Crusader
+    - 6 SCU Agricultural Supplies -> Everus Harbor on Hurston
+    - 4 SCU Agricultural Supplies -> Everus Harbor on Hurston
 
-  - Max Container Size: 8 SCU
+  - Max Container Size: 4 SCU
 
-  - Pay: 69,250 aUEC
+  - Pay: 57,000 aUEC
+
+
+- #### Junior Rank - Direct Solar Extra Small Cargo
+  - Type: Extra Small
+
+  - From:
+    - Seraphim Station
+
+  - To:
+    - 10 SCU Carbon -> Everus Harbor on Hurston
+
+  - Max Container Size: 1 SCU
+
+  - Pay: 56,250 aUEC
+
+
+- #### Junior Rank - Direct Solar Extra Small Cargo
+  - Type: Extra Small
+
+  - From:
+    - Seraphim Station
+
+  - To:
+    - 10 SCU Carbon -> Everus Harbor on Hurston
+
+  - Max Container Size: 1 SCU
+
+  - Pay: 56,250 aUEC
+
+
+- #### Rookie Rank - Direct Solar Small Cargo
+  - Type: Small
+
+  - From:
+    - Seraphim Station
+
+  - To:
+    - 9 SCU Agricultural Supplies -> Everus Harbor on Hurston
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 41,750 aUEC
+
+
+- #### Rookie Rank - Direct Solar Small Cargo
+  - Type: Small
+
+  - From:
+    - Seraphim Station
+
+  - To:
+    - 9 SCU Agricultural Supplies -> Everus Harbor on Hurston
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 41,750 aUEC
+
+
+- #### Junior Rank - Direct Solar Small Cargo
+  - Type: Small
+
+  - From:
+    - Port Tressler
+
+  - To:
+    - 22 SCU Pressurized Ice -> Seraphim Station on Crusader
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 52,250 aUEC
+
+
+- #### Junior Rank - Direct Solar Small Cargo
+  - Type: Small
+
+  - From:
+    - Port Tressler
+
+  - To:
+    - 22 SCU Pressurized Ice -> Seraphim Station on Crusader
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 52,250 aUEC
+
+
+- #### Rookie Rank - Planetary Extra Small Cargo
+  - Type: Extra Small
+
+  - From:
+    - Port Tressler
+
+  - To:
+    - 5 SCU Carbon -> Greycat Stanton IV Production Complex-A on microTech
+    - 4 SCU Carbon -> Sakura Sun Goldenrod Workcenter on microTech
+
+  - Max Container Size: 1 SCU
+
+  - Pay: 61,500 aUEC
+
+
+- #### Rookie Rank - Planetary Extra Small Cargo
+  - Type: Extra Small
+
+  - From:
+    - Port Tressler
+
+  - To:
+    - 4 SCU Titanium -> Greycat Stanton IV Production Complex-A on microTech
+    - 3 SCU Titanium -> New Babbage on microTech
+
+  - Max Container Size: 1 SCU
+
+  - Pay: 61,500 aUEC
+
+
+- #### Rookie Rank - Planetary Extra Small Cargo
+  - Type: Extra Small
+
+  - From:
+    - Port Tressler
+
+  - To:
+    - 5 SCU Quartz -> Greycat Stanton IV Production Complex-A on microTech
+    - 4 SCU Quartz -> Sakura Sun Goldenrod Workcenter on microTech
+
+  - Max Container Size: 1 SCU
+
+  - Pay: 61,500 aUEC
+
+
+- #### Rookie Rank - Planetary Extra Small Cargo
+  - Type: Extra Small
+
+  - From:
+    - Port Tressler
+
+  - To:
+    - 5 SCU Aluminum -> New Babbage on microTech
+    - 4 SCU Aluminum -> Sakura Sun Goldenrod Workcenter on microTech
+
+  - Max Container Size: 1 SCU
+
+  - Pay: 61,500 aUEC
+
+
+- #### Rookie Rank - Direct Planetary Extra Small Cargo
+  - Type: Extra Small
+
+  - From:
+    - Port Tressler
+
+  - To:
+    - 11 SCU Silicon -> Sakura Sun Goldenrod Workcenter on microTech
+
+  - Max Container Size: 1 SCU
+
+  - Pay: 50,250 aUEC
+
+
+- #### Rookie Rank - Direct Planetary Extra Small Cargo
+  - Type: Extra Small
+
+  - From:
+    - Port Tressler
+
+  - To:
+    - 11 SCU Titanium -> Sakura Sun Goldenrod Workcenter on microTech
+
+  - Max Container Size: 1 SCU
+
+  - Pay: 50,250 aUEC
+
+
+- #### Rookie Rank - Direct Planetary Extra Small Cargo
+  - Type: Extra Small
+
+  - From:
+    - Port Tressler
+
+  - To:
+    - 10 SCU Carbon -> Sakura Sun Goldenrod Workcenter on microTech
+
+  - Max Container Size: 1 SCU
+
+  - Pay: 50,250 aUEC
 
 
 - #### Junior Rank - Direct Solar Medium Cargo
@@ -743,235 +1279,670 @@
   - Pay: 57,750 aUEC
 
 
-- #### Experienced Rank - Direct Interstellar Large Cargo
-  - Type: Large
-
-  - From:
-    - Everus Harbor
-
-  - To:
-    - 518 SCU Waste -> Pyro Gateway on None
-
-  - Max Container Size: 32 SCU
-
-  - Pay: 128,000 aUEC
-
-
-- #### Experienced Rank - Direct Interstellar Large Cargo
-  - Type: Large
-
-  - From:
-    - Everus Harbor
-
-  - To:
-    - 1975 SCU Processed Food -> Pyro Gateway on None
-
-  - Max Container Size: 32 SCU
-
-  - Pay: 267,000 aUEC
-
-
-- #### Rookie Rank - Direct Interstellar Small Cargo
-  - Type: Small
-
-  - From:
-    - Everus Harbor
-
-  - To:
-    - 9 SCU Agricultural Supplies -> Pyro Gateway on None
-
-  - Max Container Size: 4 SCU
-
-  - Pay: 40,000 aUEC
-
-
-- #### Experienced Rank - Direct Interstellar Large Cargo
-  - Type: Large
-
-  - From:
-    - Pyro Gateway
-
-  - To:
-    - 1408 SCU Pressurized Ice -> Magnus Gateway on None
-
-  - Max Container Size: 32 SCU
-
-  - Pay: 267,250 aUEC
-
-
-- #### Junior Rank - Direct Interstellar Medium Cargo
-  - Type: Medium
-
-  - From:
-    - Pyro Gateway
-
-  - To:
-    - 86 SCU Tin -> Everus Harbor on Hurston
-
-  - Max Container Size: 8 SCU
-
-  - Pay: 57,500 aUEC
-
-
-- #### Experienced Rank - Direct Interstellar Medium Cargo
-  - Type: Medium
-
-  - From:
-    - Pyro Gateway
-
-  - To:
-    - 269 SCU Pressurized Ice -> Everus Harbor on Hurston
-
-  - Max Container Size: 16 SCU
-
-  - Pay: 163,500 aUEC
-
-
 ---
 
 ## Route Option 4
 
 ### Route Summary:
 
-  - **Total Profit:** 1,234,000 aUEC  
-  - **Number of Contracts:** 5  
-  - **Total stops (unique locations):** 4
+  - **Total Profit:** 889,500 aUEC  
+  - **Number of Contracts:** 17  
+  - **Total stops (unique locations):** 7
 
-#### Route Guide:
- 1. Terra Gateway -->
- 2. Magnus Gateway -->
- 3. Everus Harbor -->
- 4. Pyro Gateway -->
- 5. Terra Gateway
-
-### Locations:
-  - Everus Harbor on Hurston
-  - Magnus Gateway on None
-  - Terra Gateway on None
-  - Pyro Gateway on None
+### Route Guide:
+ 1. Everus Harbor -->
+ 2. HDPC-Cassillo -->
+ 3. Teasa Spaceport in Lorville -->
+ 4. HUR-L3 -->
+ 5. HDPC-Farnesway -->
+ 6. Sakura Sun Magnolia Workcenter -->
+ 7. HUR-L4 -->
+ 8. Everus Harbor
 
 ### Route Plan:
   - Start:
-    - Terra Gateway
+    - Everus Harbor
 
-**Terra Gateway:**
+#### **Everus Harbor:**
 
   Dropoff:
     - None
 
   Pickup:
-   - 558 SCU Carbon -> Magnus Gateway
-   - 3380 SCU Processed Food -> Magnus Gateway
+   - 15 SCU Carbon -> HDPC-Cassillo
+   - 3 SCU Carbon -> HDPC-Farnesway
+   - 4 SCU Silicon -> Sakura Sun Magnolia Workcenter
+   - 3 SCU Silicon -> HDPC-Farnesway
+   - 12 SCU Quartz -> Teasa Spaceport in Lorville
+   - 5 SCU Quartz -> HDPC-Farnesway
+   - 5 SCU Titanium -> HDPC-Farnesway
+   - 10 SCU Titanium -> HDPC-Cassillo
+   - 4 SCU Aluminum -> HDPC-Farnesway
+   - 4 SCU Aluminum -> Teasa Spaceport in Lorville
+   - 7 SCU Aluminum -> HDPC-Cassillo
+   - 10 SCU Silicon -> HUR-L3
+   - 5 SCU Tin -> HDPC-Farnesway
+   - 17 SCU Tin -> HDPC-Cassillo
+   - 8 SCU Stims -> Sakura Sun Magnolia Workcenter
+   - 14 SCU Scrap -> Teasa Spaceport in Lorville
+   - 14 SCU Pressurized Ice -> Sakura Sun Magnolia Workcenter
+   - 9 SCU Processed Food -> Sakura Sun Magnolia Workcenter
 
-   - **Total Pickup: 3938 SCU**
+   - **Total Pickup: 149 SCU**
 
-**Magnus Gateway:**
+**Current Cargo:** 149 SCU
+
+#### **HDPC-Cassillo:**
 
   Dropoff:
-   - 558 SCU Carbon
-   - 3380 SCU Processed Food
+   - 15 SCU Carbon
+   - 10 SCU Titanium
+   - 7 SCU Aluminum
+   - 17 SCU Tin
 
-   - **Total Dropoff: 3938 SCU**
+   - **Total Dropoff: 49 SCU**
 
   Pickup:
-   - 96 SCU Stims -> Everus Harbor
-   - 622 SCU Waste -> Pyro Gateway
-   - 639 SCU Silicon -> Pyro Gateway
+    - None
 
-   - **Total Pickup: 1357 SCU**
+**Current Cargo:** 100 SCU
 
-**Everus Harbor:**
+#### **Teasa Spaceport in Lorville:**
 
   Dropoff:
-   - 96 SCU Stims
+   - 12 SCU Quartz
+   - 4 SCU Aluminum
+   - 14 SCU Scrap
 
-   - **Total Dropoff: 96 SCU**
+   - **Total Dropoff: 30 SCU**
+
+  Pickup:
+   - 83 SCU Stims -> Everus Harbor
+
+   - **Total Pickup: 83 SCU**
+
+**Current Cargo:** 153 SCU
+
+#### **HUR-L3:**
+
+  Dropoff:
+   - 10 SCU Silicon
+
+   - **Total Dropoff: 10 SCU**
+
+  Pickup:
+   - 8 SCU Waste -> Everus Harbor
+
+   - **Total Pickup: 8 SCU**
+
+**Current Cargo:** 151 SCU
+
+#### **HDPC-Farnesway:**
+
+  Dropoff:
+   - 3 SCU Carbon
+   - 3 SCU Silicon
+   - 5 SCU Quartz
+   - 5 SCU Titanium
+   - 4 SCU Aluminum
+   - 5 SCU Tin
+
+   - **Total Dropoff: 25 SCU**
 
   Pickup:
     - None
 
-**Pyro Gateway:**
+**Current Cargo:** 126 SCU
+
+#### **Sakura Sun Magnolia Workcenter:**
 
   Dropoff:
-   - 622 SCU Waste
-   - 639 SCU Silicon
+   - 4 SCU Silicon
+   - 8 SCU Stims
+   - 14 SCU Pressurized Ice
+   - 9 SCU Processed Food
 
-   - **Total Dropoff: 1261 SCU**
+   - **Total Dropoff: 35 SCU**
 
   Pickup:
     - None
+
+**Current Cargo:** 91 SCU
+
+#### **HUR-L4:**
+
+  Dropoff:
+    - None
+
+  Pickup:
+   - 8 SCU Waste -> Everus Harbor
+
+   - **Total Pickup: 8 SCU**
+
+**Current Cargo:** 99 SCU
+
+#### **Everus Harbor:**
+
+  Dropoff:
+   - 83 SCU Stims
+   - 16 SCU Waste
+
+   - **Total Dropoff: 99 SCU**
+
+  Pickup:
+   - 15 SCU Carbon -> HDPC-Cassillo
+   - 3 SCU Carbon -> HDPC-Farnesway
+   - 4 SCU Silicon -> Sakura Sun Magnolia Workcenter
+   - 3 SCU Silicon -> HDPC-Farnesway
+   - 12 SCU Quartz -> Teasa Spaceport in Lorville
+   - 5 SCU Quartz -> HDPC-Farnesway
+   - 5 SCU Titanium -> HDPC-Farnesway
+   - 10 SCU Titanium -> HDPC-Cassillo
+   - 4 SCU Aluminum -> HDPC-Farnesway
+   - 4 SCU Aluminum -> Teasa Spaceport in Lorville
+   - 7 SCU Aluminum -> HDPC-Cassillo
+   - 10 SCU Silicon -> HUR-L3
+   - 5 SCU Tin -> HDPC-Farnesway
+   - 17 SCU Tin -> HDPC-Cassillo
+   - 8 SCU Stims -> Sakura Sun Magnolia Workcenter
+   - 14 SCU Scrap -> Teasa Spaceport in Lorville
+   - 14 SCU Pressurized Ice -> Sakura Sun Magnolia Workcenter
+   - 9 SCU Processed Food -> Sakura Sun Magnolia Workcenter
+
+   - **Total Pickup: 149 SCU**
+
+**Current Cargo:** 149 SCU
 
 
 ### Contracts (in recommended pickup/delivery order):
 
-- #### Experienced Rank - Direct Interstellar Large Cargo
-  - Type: Large
+- #### Rookie Rank - Planetary Extra Small Cargo
+  - Type: Extra Small
 
   - From:
-    - Terra Gateway
+    - Everus Harbor
 
   - To:
-    - 558 SCU Carbon -> Magnus Gateway on None
+    - 4 SCU Carbon -> HDPC-Cassillo on Hurston
+    - 3 SCU Carbon -> HDPC-Farnesway on Hurston
 
-  - Max Container Size: 32 SCU
+  - Max Container Size: 1 SCU
 
-  - Pay: 138,250 aUEC
+  - Pay: 61,500 aUEC
 
 
-- #### Experienced Rank - Direct Interstellar Large Cargo
-  - Type: Large
+- #### Rookie Rank - Planetary Extra Small Cargo
+  - Type: Extra Small
 
   - From:
-    - Terra Gateway
+    - Everus Harbor
 
   - To:
-    - 3380 SCU Processed Food -> Magnus Gateway on None
+    - 4 SCU Silicon -> Sakura Sun Magnolia Workcenter on Hurston
+    - 3 SCU Silicon -> HDPC-Farnesway on Hurston
 
-  - Max Container Size: 32 SCU
+  - Max Container Size: 1 SCU
 
-  - Pay: 698,750 aUEC
+  - Pay: 61,500 aUEC
 
 
-- #### Member Rank - Direct Interstellar Medium Cargo
+- #### Rookie Rank - Planetary Extra Small Cargo
+  - Type: Extra Small
+
+  - From:
+    - Everus Harbor
+
+  - To:
+    - 3 SCU Quartz -> Teasa Spaceport in Lorville on Hurston
+    - 5 SCU Quartz -> HDPC-Farnesway on Hurston
+
+  - Max Container Size: 1 SCU
+
+  - Pay: 61,500 aUEC
+
+
+- #### Rookie Rank - Planetary Extra Small Cargo
+  - Type: Extra Small
+
+  - From:
+    - Everus Harbor
+
+  - To:
+    - 5 SCU Titanium -> HDPC-Farnesway on Hurston
+    - 3 SCU Titanium -> HDPC-Cassillo on Hurston
+
+  - Max Container Size: 1 SCU
+
+  - Pay: 61,500 aUEC
+
+
+- #### Rookie Rank - Planetary Extra Small Cargo
+  - Type: Extra Small
+
+  - From:
+    - Everus Harbor
+
+  - To:
+    - 4 SCU Aluminum -> HDPC-Farnesway on Hurston
+    - 4 SCU Aluminum -> Teasa Spaceport in Lorville on Hurston
+
+  - Max Container Size: 1 SCU
+
+  - Pay: 61,500 aUEC
+
+
+- #### Rookie Rank - Direct Planetary Extra Small Cargo
+  - Type: Extra Small
+
+  - From:
+    - Everus Harbor
+
+  - To:
+    - 7 SCU Aluminum -> HDPC-Cassillo on Hurston
+
+  - Max Container Size: 1 SCU
+
+  - Pay: 50,250 aUEC
+
+
+- #### Rookie Rank - Direct Planetary Extra Small Cargo
+  - Type: Extra Small
+
+  - From:
+    - Everus Harbor
+
+  - To:
+    - 7 SCU Titanium -> HDPC-Cassillo on Hurston
+
+  - Max Container Size: 1 SCU
+
+  - Pay: 50,250 aUEC
+
+
+- #### Rookie Rank - Direct Planetary Extra Small Cargo
+  - Type: Extra Small
+
+  - From:
+    - Everus Harbor
+
+  - To:
+    - 9 SCU Quartz -> Teasa Spaceport in Lorville on Hurston
+
+  - Max Container Size: 1 SCU
+
+  - Pay: 50,250 aUEC
+
+
+- #### Rookie Rank - Direct Planetary Extra Small Cargo
+  - Type: Extra Small
+
+  - From:
+    - Everus Harbor
+
+  - To:
+    - 10 SCU Silicon -> HUR-L3 on None
+
+  - Max Container Size: 1 SCU
+
+  - Pay: 50,250 aUEC
+
+
+- #### Rookie Rank - Planetary Small Cargo
+  - Type: Small
+
+  - From:
+    - Everus Harbor
+
+  - To:
+    - 5 SCU Tin -> HDPC-Farnesway on Hurston
+    - 5 SCU Tin -> HDPC-Cassillo on Hurston
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 48,500 aUEC
+
+
+- #### Rookie Rank - Direct Planetary Small Cargo
+  - Type: Small
+
+  - From:
+    - Everus Harbor
+
+  - To:
+    - 8 SCU Stims -> Sakura Sun Magnolia Workcenter on Hurston
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 37,250 aUEC
+
+
+- #### Rookie Rank - Direct Planetary Extra Small Cargo
+  - Type: Extra Small
+
+  - From:
+    - Everus Harbor
+
+  - To:
+    - 11 SCU Carbon -> HDPC-Cassillo on Hurston
+
+  - Max Container Size: 1 SCU
+
+  - Pay: 50,250 aUEC
+
+
+- #### Rookie Rank - Direct Planetary Small Cargo
+  - Type: Small
+
+  - From:
+    - Everus Harbor
+
+  - To:
+    - 12 SCU Tin -> HDPC-Cassillo on Hurston
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 37,250 aUEC
+
+
+- #### Rookie Rank - Direct Planetary Small Cargo
+  - Type: Small
+
+  - From:
+    - Everus Harbor
+
+  - To:
+    - 14 SCU Scrap -> Teasa Spaceport in Lorville on Hurston
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 37,250 aUEC
+
+
+- #### Rookie Rank - Direct Planetary Small Cargo
+  - Type: Small
+
+  - From:
+    - Everus Harbor
+
+  - To:
+    - 14 SCU Pressurized Ice -> Sakura Sun Magnolia Workcenter on Hurston
+    - 9 SCU Processed Food -> Sakura Sun Magnolia Workcenter on Hurston
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 43,750 aUEC
+
+
+- #### Rookie Rank - Direct Planetary Medium Cargo
   - Type: Medium
 
   - From:
-    - Magnus Gateway
+    - Teasa Spaceport in Lorville
 
   - To:
-    - 96 SCU Stims -> Everus Harbor on Hurston
+    - 83 SCU Stims -> Everus Harbor on Hurston
 
   - Max Container Size: 8 SCU
 
-  - Pay: 101,250 aUEC
+  - Pay: 76,500 aUEC
 
 
-- #### Experienced Rank - Direct Interstellar Large Cargo
-  - Type: Large
-
-  - From:
-    - Magnus Gateway
-
-  - To:
-    - 622 SCU Waste -> Pyro Gateway on None
-
-  - Max Container Size: 32 SCU
-
-  - Pay: 141,500 aUEC
-
-
-- #### Experienced Rank - Direct Interstellar Large Cargo
-  - Type: Large
+- #### Rookie Rank - Solar Extra Small Cargo
+  - Type: Extra Small
 
   - From:
-    - Magnus Gateway
+    - HUR-L4, HUR-L3
 
   - To:
-    - 639 SCU Silicon -> Pyro Gateway on None
+    - 5 SCU Waste -> Everus Harbor on Hurston
+    - 3 SCU Waste -> Everus Harbor on Hurston
 
-  - Max Container Size: 32 SCU
+  - Max Container Size: 1 SCU
 
-  - Pay: 154,250 aUEC
+  - Pay: 50,250 aUEC
+
+
+---
+
+## Route Option 5
+
+### Route Summary:
+
+  - **Total Profit:** 661,500 aUEC  
+  - **Number of Contracts:** 5  
+  - **Total stops (unique locations):** 6
+
+### Route Guide:
+ 1. Covalex Distribution Center S4DC05 -->
+ 2. Shubin Mining Facility SMO-18 -->
+ 3. Shubin Mining Facility SMO-22 -->
+ 4. Port Tressler -->
+ 5. Shubin Mining Facility SMO-10 -->
+ 6. Shubin Mining Facility SMO-13 -->
+ 7. Covalex Distribution Center S4DC05
+
+### Route Plan:
+  - Start:
+    - Covalex Distribution Center S4DC05
+
+#### **Covalex Distribution Center S4DC05:**
+
+  Dropoff:
+    - None
+
+  Pickup:
+   - 3 SCU Stims -> Shubin Mining Facility SMO-13
+   - 2 SCU Stims -> Shubin Mining Facility SMO-10
+   - 3 SCU Stims -> Shubin Mining Facility SMO-22
+   - 2 SCU Stims -> Shubin Mining Facility SMO-18
+   - 3 SCU Hydrogen Fuel -> Shubin Mining Facility SMO-10
+   - 4 SCU Hydrogen Fuel -> Shubin Mining Facility SMO-13
+   - 6 SCU Quantum Fuel -> Shubin Mining Facility SMO-18
+   - 6 SCU Quantum Fuel -> Shubin Mining Facility SMO-22
+   - 5 SCU Pressurized Ice -> Shubin Mining Facility SMO-18
+   - 7 SCU Pressurized Ice -> Shubin Mining Facility SMO-22
+   - 5 SCU Processed Food -> Shubin Mining Facility SMO-10
+   - 3 SCU Processed Food -> Shubin Mining Facility SMO-13
+   - 52 SCU Waste -> Port Tressler
+   - 49 SCU Scrap -> Port Tressler
+
+   - **Total Pickup: 150 SCU**
+
+**Current Cargo:** 150 SCU
+
+#### **Shubin Mining Facility SMO-18:**
+
+  Dropoff:
+   - 2 SCU Stims
+   - 6 SCU Quantum Fuel
+   - 5 SCU Pressurized Ice
+
+   - **Total Dropoff: 13 SCU**
+
+  Pickup:
+   - 4 SCU Waste -> Covalex Distribution Center S4DC05
+   - 4 SCU Scrap -> Covalex Distribution Center S4DC05
+
+   - **Total Pickup: 8 SCU**
+
+**Current Cargo:** 145 SCU
+
+#### **Shubin Mining Facility SMO-22:**
+
+  Dropoff:
+   - 3 SCU Stims
+   - 6 SCU Quantum Fuel
+   - 7 SCU Pressurized Ice
+
+   - **Total Dropoff: 16 SCU**
+
+  Pickup:
+   - 4 SCU Waste -> Covalex Distribution Center S4DC05
+   - 4 SCU Scrap -> Covalex Distribution Center S4DC05
+
+   - **Total Pickup: 8 SCU**
+
+**Current Cargo:** 137 SCU
+
+#### **Port Tressler:**
+
+  Dropoff:
+   - 52 SCU Waste
+   - 49 SCU Scrap
+
+   - **Total Dropoff: 101 SCU**
+
+  Pickup:
+    - None
+
+**Current Cargo:** 36 SCU
+
+#### **Shubin Mining Facility SMO-10:**
+
+  Dropoff:
+   - 2 SCU Stims
+   - 3 SCU Hydrogen Fuel
+   - 5 SCU Processed Food
+
+   - **Total Dropoff: 10 SCU**
+
+  Pickup:
+   - 4 SCU Waste -> Covalex Distribution Center S4DC05
+   - 4 SCU Scrap -> Covalex Distribution Center S4DC05
+
+   - **Total Pickup: 8 SCU**
+
+**Current Cargo:** 34 SCU
+
+#### **Shubin Mining Facility SMO-13:**
+
+  Dropoff:
+   - 3 SCU Stims
+   - 4 SCU Hydrogen Fuel
+   - 3 SCU Processed Food
+
+   - **Total Dropoff: 10 SCU**
+
+  Pickup:
+   - 4 SCU Waste -> Covalex Distribution Center S4DC05
+   - 4 SCU Scrap -> Covalex Distribution Center S4DC05
+
+   - **Total Pickup: 8 SCU**
+
+**Current Cargo:** 32 SCU
+
+#### **Covalex Distribution Center S4DC05:**
+
+  Dropoff:
+   - 16 SCU Waste
+   - 16 SCU Scrap
+
+   - **Total Dropoff: 32 SCU**
+
+  Pickup:
+   - 3 SCU Stims -> Shubin Mining Facility SMO-13
+   - 2 SCU Stims -> Shubin Mining Facility SMO-10
+   - 3 SCU Stims -> Shubin Mining Facility SMO-22
+   - 2 SCU Stims -> Shubin Mining Facility SMO-18
+   - 3 SCU Hydrogen Fuel -> Shubin Mining Facility SMO-10
+   - 4 SCU Hydrogen Fuel -> Shubin Mining Facility SMO-13
+   - 6 SCU Quantum Fuel -> Shubin Mining Facility SMO-18
+   - 6 SCU Quantum Fuel -> Shubin Mining Facility SMO-22
+   - 5 SCU Pressurized Ice -> Shubin Mining Facility SMO-18
+   - 7 SCU Pressurized Ice -> Shubin Mining Facility SMO-22
+   - 5 SCU Processed Food -> Shubin Mining Facility SMO-10
+   - 3 SCU Processed Food -> Shubin Mining Facility SMO-13
+   - 52 SCU Waste -> Port Tressler
+   - 49 SCU Scrap -> Port Tressler
+
+   - **Total Pickup: 150 SCU**
+
+**Current Cargo:** 150 SCU
+
+
+### Contracts (in recommended pickup/delivery order):
+
+- #### Experienced Rank - Local Small Cargo
+  - Type: Small
+
+  - From:
+    - Covalex Distribution Center S4DC05
+
+  - To:
+    - 3 SCU Stims -> Shubin Mining Facility SMO-13 on microTech
+    - 2 SCU Stims -> Shubin Mining Facility SMO-10 on microTech
+    - 3 SCU Stims -> Shubin Mining Facility SMO-22 on microTech
+    - 2 SCU Stims -> Shubin Mining Facility SMO-18 on microTech
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 139,000 aUEC
+
+
+- #### Experienced Rank - Local Small Cargo
+  - Type: Small
+
+  - From:
+    - Covalex Distribution Center S4DC05
+
+  - To:
+    - 3 SCU Hydrogen Fuel -> Shubin Mining Facility SMO-10 on microTech
+    - 4 SCU Hydrogen Fuel -> Shubin Mining Facility SMO-13 on microTech
+    - 6 SCU Quantum Fuel -> Shubin Mining Facility SMO-18 on microTech
+    - 6 SCU Quantum Fuel -> Shubin Mining Facility SMO-22 on microTech
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 163,750 aUEC
+
+
+- #### Experienced Rank - Local Small Cargo
+  - Type: Small
+
+  - From:
+    - Covalex Distribution Center S4DC05
+
+  - To:
+    - 5 SCU Pressurized Ice -> Shubin Mining Facility SMO-18 on microTech
+    - 7 SCU Pressurized Ice -> Shubin Mining Facility SMO-22 on microTech
+    - 5 SCU Processed Food -> Shubin Mining Facility SMO-10 on microTech
+    - 3 SCU Processed Food -> Shubin Mining Facility SMO-13 on microTech
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 150,500 aUEC
+
+
+- #### Junior Rank - Direct Planetary Medium Cargo
+  - Type: Medium
+
+  - From:
+    - Covalex Distribution Center S4DC05
+
+  - To:
+    - 52 SCU Waste -> Port Tressler on microTech
+    - 49 SCU Scrap -> Port Tressler on microTech
+
+  - Max Container Size: 8 SCU
+
+  - Pay: 69,250 aUEC
+
+
+- #### Experienced Rank - Local Small Cargo
+  - Type: Small
+
+  - From:
+    - Shubin Mining Facility SMO-13, Shubin Mining Facility SMO-18, Shubin Mining Facility SMO-22, Shubin Mining Facility SMO-10
+
+  - To:
+    - 2 SCU Waste -> Covalex Distribution Center S4DC05 on microTech
+    - 2 SCU Scrap -> Covalex Distribution Center S4DC05 on microTech
+    - 2 SCU Waste -> Covalex Distribution Center S4DC05 on microTech
+    - 2 SCU Scrap -> Covalex Distribution Center S4DC05 on microTech
+
+  - Max Container Size: 4 SCU
+
+  - Pay: 139,000 aUEC
 
 
 ---

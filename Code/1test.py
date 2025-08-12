@@ -1,7 +1,7 @@
+from collections import defaultdict, deque
 from mic_Contracts import microTech_contracts as mc
 from hur_Contracts import hurston_contracts as hu
 from myLocations import *
-# Assuming you want these ships available
 from myShips import *
 
 
@@ -28,32 +28,32 @@ def print_Contract(con):
     print("\n".join(lines))
 
 
-def contract_type_matches_ship(contract_type, ship_capabilities):
-    contract_type_parts = contract_type.split()
-    for part in contract_type_parts:
-        if part in ship_capabilities:
-            return True
-    return False
+# Select ship here
+selected_ship = starlancer
+# selected_ship = hull_C
 
-
-def filter_contracts_by_ship(contracts, ship):
-    filtered = []
-    for c in contracts:
-        if contract_type_matches_ship(c.contract_Type, ship.ship_Capabilities):
-            filtered.append(c)
-    return filtered
-
-
-selected_ship = hull_C  # or starlancer
-
+print(f"Using ship: {selected_ship.ship_Name}")
+print(f"Max Cargo: {selected_ship.ship_Max_Cargo} SCU, Max Container: {
+      selected_ship.ship_Max_Container} SCU")
+print(f"Capabilities: {[cap for cap in selected_ship.ship_Capabilities]}")
 
 ship_Max_Cargo = selected_ship.ship_Max_Cargo
-ship_Max_Container = selected_ship.ship_Max_Container
-ship_Capabilities = selected_ship.ship_Capabilities
-
 max_Delivery_Locations = 5
 
+
+# Combine microTech and Hurston contracts for global selection
 contracts = mc + hu
+
+
+def contract_matches_ship_capabilities(contract, ship):
+    # The contract_type can be a combined string (e.g. "Direct Interstellar"), so split on spaces
+    contract_types = contract.contract_Type.strip().split()
+    ship_cap_names = [cap for cap in ship.ship_Capabilities]
+    # Check if any contract type matches ship capabilities
+    for ct in contract_types:
+        if ct in ship_cap_names:
+            return True
+    return False
 
 
 def can_add_contract_with_dynamic_cargo(selected_contracts, candidate_contract, ship_Max_Cargo, max_Delivery_Locations, start_loc=None):
@@ -74,6 +74,7 @@ def can_add_contract_with_dynamic_cargo(selected_contracts, candidate_contract, 
         for _, _, dloc in con.deliveries:
             add_loc(dloc)
 
+    # Check delivery locations count constraint EXCLUDING start_loc if provided
     unique_delivery_locations = set()
     for con in all_contracts:
         for _, _, dloc in con.deliveries:
@@ -87,8 +88,10 @@ def can_add_contract_with_dynamic_cargo(selected_contracts, candidate_contract, 
     onboard = []
 
     for loc in loc_order:
+        # Drop off first (important — we free capacity before picking up)
         onboard = [cargo for cargo in onboard if cargo['to_loc'] != loc]
 
+        # Then pick up
         for con in all_contracts:
             from_locs = con.from_Location if isinstance(
                 con.from_Location, list) else [con.from_Location]
@@ -119,6 +122,8 @@ def select_contracts(filtered_contracts, ship_Max_Cargo, max_Delivery_Locations,
 
     selected_contracts = []
     for c, _, _, _ in contract_info:
+        if not contract_matches_ship_capabilities(c, selected_ship):
+            continue
         can_add, _ = can_add_contract_with_dynamic_cargo(
             selected_contracts, c, ship_Max_Cargo, max_Delivery_Locations, start_loc)
         if can_add:
@@ -154,11 +159,8 @@ def find_top_routes(contracts, ship_Max_Cargo, max_Delivery_Locations, top_n=5):
             )
         ]
 
-        filtered_contracts = filter_contracts_by_ship(
-            filtered_contracts, selected_ship)
-
         selected_contracts, used_locations, total_pay = select_contracts(
-            filtered_contracts, ship_Max_Cargo, max_Delivery_Locations, start_loc=start_loc)
+            filtered_contracts, ship_Max_Cargo, max_Delivery_Locations, start_loc)
 
         if selected_contracts:
             routes.append(
@@ -233,26 +235,81 @@ def order_contracts_by_route(selected_contracts, start_loc):
     return ordered
 
 
-def save_routes_to_markdown(routes, filename="route_Options.md", top_n=10):
+def build_route_guide(locations_order, ordered_contracts, start_loc):
+    # Build graph edges: from_loc -> set of to_locs
+    graph = defaultdict(set)
+    in_degree = defaultdict(int)
+    all_locs = set()
+
+    for con in ordered_contracts:
+        from_locs = con.from_Location if isinstance(
+            con.from_Location, list) else [con.from_Location]
+        for from_loc in from_locs:
+            all_locs.add(from_loc)
+            for _, _, to_loc in con.deliveries:
+                graph[from_loc].add(to_loc)
+                all_locs.add(to_loc)
+
+    # Initialize in-degree counts
+    for loc in all_locs:
+        in_degree[loc] = 0
+    for from_loc, to_locs in graph.items():
+        for to_loc in to_locs:
+            in_degree[to_loc] += 1
+
+    # Start queue with start_loc if it has zero in-degree
+    queue = deque()
+    if in_degree[start_loc] == 0:
+        queue.append(start_loc)
+    else:
+        # If start_loc has incoming edges, still start from it for route guide purposes
+        queue.append(start_loc)
+
+    visited = set()
+    route = []
+
+    while queue:
+        loc = queue.popleft()
+        if loc in visited:
+            continue
+        route.append(loc)
+        visited.add(loc)
+
+        # Decrement in-degree of neighbors
+        for neighbor in graph.get(loc, []):
+            in_degree[neighbor] -= 1
+            if in_degree[neighbor] == 0 and neighbor not in visited:
+                queue.append(neighbor)
+
+    # Add any remaining locations not visited (to cover isolated nodes)
+    for loc in locations_order:
+        if loc not in visited:
+            route.append(loc)
+
+    # Optional: if route doesn't end at start_loc but a backhaul to start exists, append start_loc to close loop
+    if route[-1] != start_loc and start_loc in graph.get(route[-1], []):
+        route.append(start_loc)
+
+    return route
+
+
+def save_routes_to_markdown(routes, ship, filename="route_Options.md", top_n=10):
     with open(filename, "w", encoding="utf-8") as f:
         f.write(f"# Top {top_n} Route Options\n\n")
 
-        f.write(f"## Ship Used for Route Planning:\n\n")
-        f.write(f"- Name: {selected_ship.ship_Name}\n")
-        f.write(f"- Max Cargo Capacity: {selected_ship.ship_Max_Cargo} SCU\n")
+        # Ship info section
+        f.write("## Ship Used for Route Planning:\n\n")
+        f.write(f"- Name: {ship.ship_Name}\n")
+        f.write(f"- Max Cargo Capacity: {ship.ship_Max_Cargo} SCU\n")
+        f.write(f"- Max Container Size: {ship.ship_Max_Container} SCU\n")
         f.write(
-            f"- Max Container Size: {selected_ship.ship_Max_Container} SCU\n")
-        caps = ", ".join(selected_ship.ship_Capabilities)
-        f.write(f"- Capabilities: {caps}\n\n")
-
-        routes.sort(key=lambda r: r[2], reverse=True)
+            f"- Capabilities: {', '.join([cap for cap in ship.ship_Capabilities])}\n\n")
 
         for i, (selected_contracts, used_locations, total_pay, start_loc) in enumerate(routes[:top_n], 1):
             ordered_contracts = order_contracts_by_route(
                 selected_contracts, start_loc)
 
             locations_order = [start_loc]
-
             visited = set(locations_order)
             for con in ordered_contracts:
                 from_locs = con.from_Location if isinstance(
@@ -266,36 +323,34 @@ def save_routes_to_markdown(routes, filename="route_Options.md", top_n=10):
                         locations_order.append(dloc)
                         visited.add(dloc)
 
-            # --- New Route Guide section with numbered list and arrows ---
-            route_guide_lines = []
-            for idx, loc in enumerate(locations_order, 1):
-                arrow = " -->" if idx <= len(locations_order) else ""
-                route_guide_lines.append(f" {idx}. {loc.name}{arrow}")
-
-            # Add closing loop to start location if not last
-            if locations_order[-1] != start_loc:
-                route_guide_lines.append(
-                    f" {len(locations_order) + 1}. {start_loc.name}")
+            # Build route guide using your dependency logic
+            route_guide = build_route_guide(
+                locations_order, ordered_contracts, start_loc)
 
             f.write(f"## Route Option {i}\n\n")
-            f.write(f"### Route Summary:\n\n")
+
+            # Print route guide in numbered markdown format with location names
+            f.write("#### Route Guide:\n")
+            for idx, loc in enumerate(route_guide, 1):
+                sep = " -->" if idx < len(route_guide) else ""
+                f.write(f" {idx}. {loc.name}{sep}\n")
+            f.write("\n")
+
             f.write(f"  - **Total Profit:** {total_pay:,} aUEC  \n")
             f.write(
                 f"  - **Number of Contracts:** {len(selected_contracts)}  \n")
             f.write(
                 f"  - **Total stops (unique locations):** {len(used_locations)}\n\n")
-
-            f.write(f"#### Route Guide:\n")
-            for line in route_guide_lines:
-                f.write(f"{line}\n")
-            f.write("\n")
-
             f.write("### Locations:\n")
             for loc in used_locations:
                 f.write(f"  - {loc.name} on {loc.planet}\n")
 
             f.write("\n### Route Plan:\n")
             f.write(f"  - Start:\n    - {start_loc.name}\n\n")
+
+            # --- PATCH: ensure the route plan follows the route_guide order ---
+            # use the route_guide order for printing the plan (this guarantees consistency)
+            locations_order = route_guide
 
             onboard_cargo = []
 
@@ -310,7 +365,13 @@ def save_routes_to_markdown(routes, filename="route_Options.md", top_n=10):
                     from_locs = con.from_Location if isinstance(
                         con.from_Location, list) else [con.from_Location]
                     if loc in from_locs:
-                        pickups.extend(contract_cargo[con])
+                        pickups.extend(contract_cargo := [{
+                            "amount": amount,
+                            "item": item,
+                            "from_loc": con.from_Location if not isinstance(con.from_Location, list) else con.from_Location,
+                            "to_loc": delivery_loc,
+                            "contract": con
+                        } for amount, item, delivery_loc in con.deliveries])
 
                 onboard_cargo.extend(pickups)
 
@@ -343,9 +404,13 @@ def save_routes_to_markdown(routes, filename="route_Options.md", top_n=10):
                     for (item, dest), amt in pickup_summary.items():
                         f.write(f"   - {amt} SCU {item} -> {dest}\n")
                     f.write(
-                        f"\n   - **Total Pickup: {total_pickup} SCU**\n\n")
+                        f"\n   - **Total Pickup: {total_pickup} SCU**\n")
                 else:
-                    f.write("\n  Pickup:\n    - None\n\n")
+                    f.write("\n  Pickup:\n    - None\n")
+
+                # Current Cargo = total onboard after dropoff and pickup at this location
+                current_cargo = sum(cargo['amount'] for cargo in onboard_cargo)
+                f.write(f"  - **Current Cargo:** {current_cargo} SCU\n\n")
 
             f.write("\n### Contracts (in recommended pickup/delivery order):\n\n")
             for con in ordered_contracts:
@@ -377,11 +442,6 @@ def save_routes_to_markdown(routes, filename="route_Options.md", top_n=10):
 
 
 def main():
-    print(f"Using ship: {selected_ship.ship_Name}")
-    print(f"Max Cargo: {selected_ship.ship_Max_Cargo} SCU, Max Container: {
-          selected_ship.ship_Max_Container} SCU")
-    print(f"Capabilities: {[cap for cap in selected_ship.ship_Capabilities]}")
-
     top_routes = find_top_routes(
         contracts, ship_Max_Cargo, max_Delivery_Locations, top_n=5)
 
@@ -410,6 +470,7 @@ def main():
         full_routes.append(
             (selected_contracts, used_locations, total_pay, start_loc))
 
+    # Sort final routes by total_pay descending before output
     full_routes.sort(key=lambda r: r[2], reverse=True)
 
     print(f"\nFound {len(full_routes)} route options.\n")
@@ -421,23 +482,8 @@ def main():
         print(f"Contracts: {len(selected_contracts)}")
         print("----")
 
-    save_routes_to_markdown(full_routes, top_n=5)
-
-
-contract_cargo = {}
+    save_routes_to_markdown(full_routes, selected_ship, top_n=len(full_routes))
 
 
 if __name__ == "__main__":
-    def compute_contract_cargo(contracts_list):
-        contract_cargo_dict = {}
-        for con in contracts_list:
-            cargo_list = []
-            for amount, item, dloc in con.deliveries:
-                cargo_list.append(
-                    {"amount": amount, "item": item, "to_loc": dloc})
-            contract_cargo_dict[con] = cargo_list
-        return contract_cargo_dict
-
-    contract_cargo = compute_contract_cargo(mc + hu)
-
     main()
