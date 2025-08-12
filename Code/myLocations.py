@@ -15,10 +15,10 @@ class Location:
 # Solar Locations
 
 # Major Stations
-port_Tressler = Location("Port Tressler", solar, microTech)
-everus_Harbor = Location("Everus Harbor", solar, hurston)
-seraphim_Station = Location("Seraphim Station", solar, crusader)
-baijini_Point = Location("Baijini Point", solar, arccorp)
+port_Tressler = Location("Port Tressler", interstellar, microTech)
+everus_Harbor = Location("Everus Harbor", interstellar, hurston)
+seraphim_Station = Location("Seraphim Station", interstellar, crusader)
+baijini_Point = Location("Baijini Point", interstellar, arccorp)
 
 # Lagrange Points
 

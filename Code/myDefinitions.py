@@ -56,3 +56,11 @@ class Contract:
         self.deliveries = deliveries
         self.max_Container = max_Container
         self.contract_Pay = contract_Pay
+
+
+class Ship:
+    def __init__(self, ship_Name, ship_Max_Cargo, ship_Max_Container, ship_Capabilities):
+        self.ship_Name = ship_Name
+        self.ship_Max_Cargo = ship_Max_Cargo
+        self.ship_Max_Container = ship_Max_Container
+        self.ship_Capabilities = ship_Capabilities

@@ -1,6 +1,7 @@
 from mic_Contracts import microTech_contracts as mc
 from hur_Contracts import hurston_contracts as hu
 from myLocations import *
+from myShips import *
 
 
 def print_Contract(con):
@@ -26,10 +27,20 @@ def print_Contract(con):
     print("\n".join(lines))
 
 
-ship_Max_Cargo = 224
-max_Delivery_Locations = 5
+# Choose your ship here:
+selected_ship = starlancer  # or hull_C
+
+print(f"Using ship: {selected_ship.ship_Name}")
+print(f"Max Cargo: {selected_ship.ship_Max_Cargo} SCU, Max Container: {
+      selected_ship.ship_Max_Container} SCU")
+print(f"Capabilities: {selected_ship.ship_Capabilities}")
+
+ship_Max_Cargo = selected_ship.ship_Max_Cargo
+max_Delivery_Locations = 6  # or set as needed
+
+
 # Combine microTech and Hurston contracts for global selection
-contracts = mc  # + hu
+contracts = mc + hu
 
 
 def can_add_contract_with_dynamic_cargo(selected_contracts, candidate_contract, ship_Max_Cargo, max_Delivery_Locations, start_loc=None):
@@ -141,9 +152,12 @@ def find_top_routes(contracts, ship_Max_Cargo, max_Delivery_Locations, top_n=5):
     routes = []
 
     for start_loc in unique_from_locations:
-        # Filter contracts that start from start_loc (including multi-from)
+        # Filter contracts that match ship capabilities by substring check
         filtered_contracts = [
-            c for c in contracts if (
+            c for c in contracts if any(
+                cap in c.contract_Type for cap in selected_ship.ship_Capabilities
+            )
+            and (
                 (c.from_Location == start_loc)
                 or (isinstance(c.from_Location, list) and start_loc in c.from_Location)
             )
@@ -242,6 +256,16 @@ def order_contracts_by_route(selected_contracts, start_loc):
 
 def save_routes_to_markdown(routes, filename="route_Options.md", top_n=10):
     with open(filename, "w", encoding="utf-8") as f:
+        # Ship info at the top
+        f.write(f"# Ship Information\n\n")
+        f.write(f" - **Ship Name:** {selected_ship.ship_Name}\n")
+        f.write(
+            f" - **Max Cargo Capacity:** {selected_ship.ship_Max_Cargo} SCU\n")
+        f.write(
+            f" - **Max Container Size:** {selected_ship.ship_Max_Container} SCU\n")
+        caps = ", ".join(selected_ship.ship_Capabilities)
+        f.write(f" - **Capabilities:** {caps}\n\n")
+
         f.write(f"# Top {top_n} Route Options\n\n")
         for i, (selected_contracts, used_locations, total_pay, start_loc) in enumerate(routes[:top_n], 1):
             ordered_contracts = order_contracts_by_route(
@@ -371,7 +395,7 @@ def save_routes_to_markdown(routes, filename="route_Options.md", top_n=10):
 
 def main():
     top_routes = find_top_routes(
-        contracts, ship_Max_Cargo, max_Delivery_Locations, top_n=5)
+        contracts, selected_ship.ship_Max_Cargo, max_Delivery_Locations, top_n=5)
 
     if not top_routes:
         print("No feasible routes found.")
@@ -380,12 +404,12 @@ def main():
     full_routes = []
     for selected_contracts, used_locations, total_pay, start_loc in top_routes:
         backhauls = find_backhaul_contracts(
-            selected_contracts, contracts, ship_Max_Cargo, max_Delivery_Locations, start_loc)
+            selected_contracts, contracts, selected_ship.ship_Max_Cargo, max_Delivery_Locations, start_loc)
 
         for b in backhauls:
             if b not in selected_contracts:
                 can_add, reason = can_add_contract_with_dynamic_cargo(
-                    selected_contracts, b, ship_Max_Cargo, max_Delivery_Locations, start_loc=start_loc)
+                    selected_contracts, b, selected_ship.ship_Max_Cargo, max_Delivery_Locations, start_loc=start_loc)
                 if can_add:
                     selected_contracts.append(b)
                     from_locs = b.from_Location if isinstance(
@@ -397,6 +421,9 @@ def main():
 
         full_routes.append(
             (selected_contracts, used_locations, total_pay, start_loc))
+
+    # Sort full_routes by total_pay descending
+    full_routes.sort(key=lambda x: x[2], reverse=True)
 
     print(f"\nFound {len(full_routes)} route options.\n")
 
