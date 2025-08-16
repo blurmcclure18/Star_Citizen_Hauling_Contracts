@@ -17,9 +17,9 @@
 
 ### Route Guide:
  1. Port Tressler -->
- 2. MIC-L4 -->
+ 2. MIC-L5 -->
  3. MIC-L2 -->
- 4. MIC-L5 -->
+ 4. MIC-L4 -->
  5. MIC-L1 -->
  6. MIC-L3 -->
  7. Port Tressler
@@ -54,22 +54,22 @@
 
 **Current Cargo:** 220 SCU
 
-#### **MIC-L4:**
+#### **MIC-L5:**
 
   Dropoff:
-   - 12 SCU Pressurized Ice
    - 6 SCU Stims
-   - 6 SCU Processed Food
+   - 5 SCU Pressurized Ice
+   - 7 SCU Processed Food
 
-   - **Total Dropoff: 24 SCU**
+   - **Total Dropoff: 18 SCU**
 
   Pickup:
-   - 18 SCU Waste -> Port Tressler
-   - 16 SCU Scrap -> Port Tressler
+   - 6 SCU Waste -> Port Tressler
+   - 6 SCU Scrap -> Port Tressler
 
-   - **Total Pickup: 34 SCU**
+   - **Total Pickup: 12 SCU**
 
-**Current Cargo:** 230 SCU
+**Current Cargo:** 214 SCU
 
 #### **MIC-L2:**
 
@@ -90,22 +90,22 @@
 
    - **Total Pickup: 117 SCU**
 
-**Current Cargo:** 218 SCU
+**Current Cargo:** 202 SCU
 
-#### **MIC-L5:**
+#### **MIC-L4:**
 
   Dropoff:
+   - 12 SCU Pressurized Ice
    - 6 SCU Stims
-   - 5 SCU Pressurized Ice
-   - 7 SCU Processed Food
+   - 6 SCU Processed Food
 
-   - **Total Dropoff: 18 SCU**
+   - **Total Dropoff: 24 SCU**
 
   Pickup:
-   - 6 SCU Waste -> Port Tressler
-   - 6 SCU Scrap -> Port Tressler
+   - 18 SCU Waste -> Port Tressler
+   - 16 SCU Scrap -> Port Tressler
 
-   - **Total Pickup: 12 SCU**
+   - **Total Pickup: 34 SCU**
 
 **Current Cargo:** 212 SCU
 
@@ -910,10 +910,10 @@
 ### Route Guide:
  1. Seraphim Station -->
  2. Port Tressler -->
- 3. Greycat Stanton IV Production Complex-A -->
- 4. Everus Harbor -->
- 5. New Babbage -->
- 6. Sakura Sun Goldenrod Workcenter
+ 3. Everus Harbor -->
+ 4. New Babbage -->
+ 5. Sakura Sun Goldenrod Workcenter -->
+ 6. Greycat Stanton IV Production Complex-A
 
 ### Route Plan:
   - Start:
@@ -958,20 +958,6 @@
 
 **Current Cargo:** 195 SCU
 
-#### **Greycat Stanton IV Production Complex-A:**
-
-  Dropoff:
-   - 5 SCU Carbon
-   - 4 SCU Titanium
-   - 5 SCU Quartz
-
-   - **Total Dropoff: 14 SCU**
-
-  Pickup:
-    - None
-
-**Current Cargo:** 181 SCU
-
 #### **Everus Harbor:**
 
   Dropoff:
@@ -985,7 +971,7 @@
 
    - **Total Pickup: 109 SCU**
 
-**Current Cargo:** 205 SCU
+**Current Cargo:** 219 SCU
 
 #### **New Babbage:**
 
@@ -998,7 +984,7 @@
   Pickup:
     - None
 
-**Current Cargo:** 197 SCU
+**Current Cargo:** 211 SCU
 
 #### **Sakura Sun Goldenrod Workcenter:**
 
@@ -1010,6 +996,20 @@
    - 11 SCU Titanium
 
    - **Total Dropoff: 44 SCU**
+
+  Pickup:
+    - None
+
+**Current Cargo:** 167 SCU
+
+#### **Greycat Stanton IV Production Complex-A:**
+
+  Dropoff:
+   - 5 SCU Carbon
+   - 4 SCU Titanium
+   - 5 SCU Quartz
+
+   - **Total Dropoff: 14 SCU**
 
   Pickup:
     - None
@@ -1291,11 +1291,11 @@
 
 ### Route Guide:
  1. Everus Harbor -->
- 2. HDPC-Cassillo -->
- 3. Teasa Spaceport in Lorville -->
+ 2. HDPC-Farnesway -->
+ 3. Sakura Sun Magnolia Workcenter -->
  4. HUR-L3 -->
- 5. HDPC-Farnesway -->
- 6. Sakura Sun Magnolia Workcenter -->
+ 5. HDPC-Cassillo -->
+ 6. Teasa Spaceport in Lorville -->
  7. HUR-L4 -->
  8. Everus Harbor
 
@@ -1332,51 +1332,6 @@
 
 **Current Cargo:** 149 SCU
 
-#### **HDPC-Cassillo:**
-
-  Dropoff:
-   - 15 SCU Carbon
-   - 10 SCU Titanium
-   - 7 SCU Aluminum
-   - 17 SCU Tin
-
-   - **Total Dropoff: 49 SCU**
-
-  Pickup:
-    - None
-
-**Current Cargo:** 100 SCU
-
-#### **Teasa Spaceport in Lorville:**
-
-  Dropoff:
-   - 12 SCU Quartz
-   - 4 SCU Aluminum
-   - 14 SCU Scrap
-
-   - **Total Dropoff: 30 SCU**
-
-  Pickup:
-   - 83 SCU Stims -> Everus Harbor
-
-   - **Total Pickup: 83 SCU**
-
-**Current Cargo:** 153 SCU
-
-#### **HUR-L3:**
-
-  Dropoff:
-   - 10 SCU Silicon
-
-   - **Total Dropoff: 10 SCU**
-
-  Pickup:
-   - 8 SCU Waste -> Everus Harbor
-
-   - **Total Pickup: 8 SCU**
-
-**Current Cargo:** 151 SCU
-
 #### **HDPC-Farnesway:**
 
   Dropoff:
@@ -1392,7 +1347,7 @@
   Pickup:
     - None
 
-**Current Cargo:** 126 SCU
+**Current Cargo:** 124 SCU
 
 #### **Sakura Sun Magnolia Workcenter:**
 
@@ -1406,6 +1361,51 @@
 
   Pickup:
     - None
+
+**Current Cargo:** 89 SCU
+
+#### **HUR-L3:**
+
+  Dropoff:
+   - 10 SCU Silicon
+
+   - **Total Dropoff: 10 SCU**
+
+  Pickup:
+   - 8 SCU Waste -> Everus Harbor
+
+   - **Total Pickup: 8 SCU**
+
+**Current Cargo:** 87 SCU
+
+#### **HDPC-Cassillo:**
+
+  Dropoff:
+   - 15 SCU Carbon
+   - 10 SCU Titanium
+   - 7 SCU Aluminum
+   - 17 SCU Tin
+
+   - **Total Dropoff: 49 SCU**
+
+  Pickup:
+    - None
+
+**Current Cargo:** 38 SCU
+
+#### **Teasa Spaceport in Lorville:**
+
+  Dropoff:
+   - 12 SCU Quartz
+   - 4 SCU Aluminum
+   - 14 SCU Scrap
+
+   - **Total Dropoff: 30 SCU**
+
+  Pickup:
+   - 83 SCU Stims -> Everus Harbor
+
+   - **Total Pickup: 83 SCU**
 
 **Current Cargo:** 91 SCU
 
@@ -1424,8 +1424,8 @@
 #### **Everus Harbor:**
 
   Dropoff:
-   - 83 SCU Stims
    - 16 SCU Waste
+   - 83 SCU Stims
 
    - **Total Dropoff: 99 SCU**
 
@@ -1714,12 +1714,11 @@
 
 ### Route Guide:
  1. Covalex Distribution Center S4DC05 -->
- 2. Shubin Mining Facility SMO-18 -->
- 3. Shubin Mining Facility SMO-22 -->
- 4. Port Tressler -->
- 5. Shubin Mining Facility SMO-10 -->
- 6. Shubin Mining Facility SMO-13 -->
- 7. Covalex Distribution Center S4DC05
+ 2. Shubin Mining Facility SMO-10 -->
+ 3. Shubin Mining Facility SMO-13 -->
+ 4. Shubin Mining Facility SMO-18 -->
+ 5. Shubin Mining Facility SMO-22 -->
+ 6. Port Tressler
 
 ### Route Plan:
   - Start:
@@ -1750,53 +1749,6 @@
 
 **Current Cargo:** 150 SCU
 
-#### **Shubin Mining Facility SMO-18:**
-
-  Dropoff:
-   - 2 SCU Stims
-   - 6 SCU Quantum Fuel
-   - 5 SCU Pressurized Ice
-
-   - **Total Dropoff: 13 SCU**
-
-  Pickup:
-   - 4 SCU Waste -> Covalex Distribution Center S4DC05
-   - 4 SCU Scrap -> Covalex Distribution Center S4DC05
-
-   - **Total Pickup: 8 SCU**
-
-**Current Cargo:** 145 SCU
-
-#### **Shubin Mining Facility SMO-22:**
-
-  Dropoff:
-   - 3 SCU Stims
-   - 6 SCU Quantum Fuel
-   - 7 SCU Pressurized Ice
-
-   - **Total Dropoff: 16 SCU**
-
-  Pickup:
-   - 4 SCU Waste -> Covalex Distribution Center S4DC05
-   - 4 SCU Scrap -> Covalex Distribution Center S4DC05
-
-   - **Total Pickup: 8 SCU**
-
-**Current Cargo:** 137 SCU
-
-#### **Port Tressler:**
-
-  Dropoff:
-   - 52 SCU Waste
-   - 49 SCU Scrap
-
-   - **Total Dropoff: 101 SCU**
-
-  Pickup:
-    - None
-
-**Current Cargo:** 36 SCU
-
 #### **Shubin Mining Facility SMO-10:**
 
   Dropoff:
@@ -1812,7 +1764,7 @@
 
    - **Total Pickup: 8 SCU**
 
-**Current Cargo:** 34 SCU
+**Current Cargo:** 148 SCU
 
 #### **Shubin Mining Facility SMO-13:**
 
@@ -1829,35 +1781,54 @@
 
    - **Total Pickup: 8 SCU**
 
-**Current Cargo:** 32 SCU
+**Current Cargo:** 146 SCU
 
-#### **Covalex Distribution Center S4DC05:**
+#### **Shubin Mining Facility SMO-18:**
 
   Dropoff:
-   - 16 SCU Waste
-   - 16 SCU Scrap
+   - 2 SCU Stims
+   - 6 SCU Quantum Fuel
+   - 5 SCU Pressurized Ice
 
-   - **Total Dropoff: 32 SCU**
+   - **Total Dropoff: 13 SCU**
 
   Pickup:
-   - 3 SCU Stims -> Shubin Mining Facility SMO-13
-   - 2 SCU Stims -> Shubin Mining Facility SMO-10
-   - 3 SCU Stims -> Shubin Mining Facility SMO-22
-   - 2 SCU Stims -> Shubin Mining Facility SMO-18
-   - 3 SCU Hydrogen Fuel -> Shubin Mining Facility SMO-10
-   - 4 SCU Hydrogen Fuel -> Shubin Mining Facility SMO-13
-   - 6 SCU Quantum Fuel -> Shubin Mining Facility SMO-18
-   - 6 SCU Quantum Fuel -> Shubin Mining Facility SMO-22
-   - 5 SCU Pressurized Ice -> Shubin Mining Facility SMO-18
-   - 7 SCU Pressurized Ice -> Shubin Mining Facility SMO-22
-   - 5 SCU Processed Food -> Shubin Mining Facility SMO-10
-   - 3 SCU Processed Food -> Shubin Mining Facility SMO-13
-   - 52 SCU Waste -> Port Tressler
-   - 49 SCU Scrap -> Port Tressler
+   - 4 SCU Waste -> Covalex Distribution Center S4DC05
+   - 4 SCU Scrap -> Covalex Distribution Center S4DC05
 
-   - **Total Pickup: 150 SCU**
+   - **Total Pickup: 8 SCU**
 
-**Current Cargo:** 150 SCU
+**Current Cargo:** 141 SCU
+
+#### **Shubin Mining Facility SMO-22:**
+
+  Dropoff:
+   - 3 SCU Stims
+   - 6 SCU Quantum Fuel
+   - 7 SCU Pressurized Ice
+
+   - **Total Dropoff: 16 SCU**
+
+  Pickup:
+   - 4 SCU Waste -> Covalex Distribution Center S4DC05
+   - 4 SCU Scrap -> Covalex Distribution Center S4DC05
+
+   - **Total Pickup: 8 SCU**
+
+**Current Cargo:** 133 SCU
+
+#### **Port Tressler:**
+
+  Dropoff:
+   - 52 SCU Waste
+   - 49 SCU Scrap
+
+   - **Total Dropoff: 101 SCU**
+
+  Pickup:
+    - None
+
+**Current Cargo:** 32 SCU
 
 
 ### Contracts (in recommended pickup/delivery order):
