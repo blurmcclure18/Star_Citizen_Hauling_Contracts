@@ -2,15 +2,15 @@
 
 ## Route Option 1
 
-  - **Total Profit:** 706,500 aUEC  
-  - **Number of Contracts:** 9  
+  - **Total Profit:** 770,000 aUEC  
+  - **Number of Contracts:** 10  
   - **Total stops (unique locations):** 5
 
 ### Locations:
-  - MIC-L1 on None
   - MIC-L2 on None
-  - MIC-L3 on None
+  - MIC-L1 on None
   - MIC-L5 on None
+  - MIC-L3 on None
   - MIC-L4 on None
 
 ### Route Plan:
@@ -68,7 +68,9 @@
   - 103 SCU Quartz (Raw)
 
   Pickup:
-    - None
+    - 11 SCU Silicon -> MIC-L3
+
+    - **Total Pickup: 11 SCU**
 
 **MIC-L5:**
 
@@ -233,6 +235,20 @@
   - Max Container Size: 8 SCU
 
   - Pay: 51,250 aUEC
+
+
+- #### Rookie Rank - Direct Solar Extra Small Cargo
+  - Type: Extra Small
+
+  - From:
+    - MIC-L2
+
+  - To:
+    - 11 SCU Silicon -> MIC-L3 on None
+
+  - Max Container Size: 1 SCU
+
+  - Pay: 63,500 aUEC
 
 
 ---

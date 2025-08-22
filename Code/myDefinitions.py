@@ -46,13 +46,21 @@ raw = "Quartz (Raw)"
 
 
 class Contract:
-    def __init__(self, contract_Origin, contract_Rank, contract_Type, contract_Size, from_Location, deliveries, max_Container, contract_Pay):
+    _id_counter = 1  # class variable for auto-incrementing IDs
+
+    def __init__(self, contract_Origin, contract_Rank, contract_Type, contract_Size,
+                 from_Location, deliveries, max_Container, contract_Pay):
+        self.contract_ID = Contract._id_counter
+        Contract._id_counter += 1
+
         self.contract_Origin = contract_Origin
         self.contract_Rank = contract_Rank
         self.contract_Type = contract_Type
         self.contract_Size = contract_Size
         self.from_Location = from_Location
-        # List of tuples: [(amount, item, location), ...]
         self.deliveries = deliveries
         self.max_Container = max_Container
         self.contract_Pay = contract_Pay
+
+    def __repr__(self):
+        return f"<Contract #{self.contract_ID} {self.contract_Origin} -> {self.from_Location}>"
